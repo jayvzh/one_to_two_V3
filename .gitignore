@@ -134,3 +134,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Electron build output
+out/
+dist/
+release/
+
+# Electron-specific
+*.node

@@ -1,0 +1,44 @@
+.logViewer {
+  :global {
+    .ant-card-body {
+      padding: 12px;
+    }
+  }
+}
+
+.logContainer {
+  overflow-y: auto;
+  background: #1e1e1e;
+  border-radius: 4px;
+  padding: 12px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.logLine {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+  color: #d4d4d4;
+  word-break: break-all;
+}
+
+.timestamp {
+  color: #6a9955;
+  white-space: nowrap;
+}
+
+.level {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.4;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+.message {
+  flex: 1;
+  color: #ce9178;
+}
