@@ -3,8 +3,8 @@ from pydantic import BaseModel
 from typing import Optional
 import asyncio
 
-from ..services import PipelineService
-from ..models.tasks import TaskManager, TaskState
+from services import PipelineService
+from models.tasks import TaskManager, TaskState
 
 router = APIRouter()
 task_manager = TaskManager()

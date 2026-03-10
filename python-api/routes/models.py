@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from typing import Optional
 
-from ..services import PipelineService
+from services import PipelineService
 
 router = APIRouter()
 pipeline_service = PipelineService()

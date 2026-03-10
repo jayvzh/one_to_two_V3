@@ -5,8 +5,31 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { existsSync } from 'fs'
 import { fileURLToPath } from 'url'
 
+// 禁用 GPU 缓存以避免权限错误
+app.commandLine.appendSwitch('disable-gpu-shader-disk-cache')
+app.commandLine.appendSwitch('disable-gpu-disk-cache')
+app.commandLine.appendSwitch('disable-gpu-process-crash-limit')
+app.commandLine.appendSwitch('disable-features', 'AutofillServerCommunication')
+// 禁用磁盘缓存以避免权限问题
+app.commandLine.appendSwitch('disable-cache')
+app.commandLine.appendSwitch('disable-application-cache')
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
+
+function getProjectRoot(): string {
+  let currentDir = __dirname
+  while (currentDir) {
+    const packageJsonPath = join(currentDir, 'package.json')
+    if (existsSync(packageJsonPath)) {
+      return currentDir
+    }
+    const parentDir = dirname(currentDir)
+    if (parentDir === currentDir) break
+    currentDir = parentDir
+  }
+  return join(__dirname, '..')
+}
 
 const PYTHON_API_HOST = '127.0.0.1'
 const PYTHON_API_PORT = 8000
@@ -19,24 +42,20 @@ let isQuitting = false
 let pythonReady = false
 
 function findPythonExecutable(): string | null {
-  const projectRoot = join(__dirname, '..')
+  const projectRoot = getProjectRoot()
 
-  if (!is.dev) {
-    const possiblePaths = [
-      join(projectRoot, 'resources', 'python', 'python.exe'),
-      join(projectRoot, 'resources', 'python', 'Scripts', 'python.exe'),
-      join(projectRoot, '..', 'resources', 'python', 'python.exe'),
-      join(projectRoot, '..', 'resources', 'python', 'Scripts', 'python.exe'),
-    ]
+  const venvPythonPaths = [
+    join(projectRoot, 'venv', 'Scripts', 'python.exe'),
+    join(projectRoot, '.venv', 'Scripts', 'python.exe'),
+  ]
 
-    for (const path of possiblePaths) {
-      if (existsSync(path)) {
-        console.log(`[Python] Found Python at: ${path}`)
-        return path
-      }
+  for (const path of venvPythonPaths) {
+    if (existsSync(path)) {
+      console.log(`[Python] Found venv Python at: ${path}`)
+      return path
     }
   }
-
+  
   const pythonCommands = process.platform === 'win32' 
     ? ['python.exe', 'python3.exe', 'py.exe']
     : ['python', 'python3']
@@ -50,6 +69,20 @@ function findPythonExecutable(): string | null {
       }
     } catch {
       continue
+    }
+  }
+
+  if (!is.dev) {
+    const possiblePaths = [
+      join(projectRoot, 'resources', 'python', 'python.exe'),
+      join(projectRoot, 'resources', 'python', 'Scripts', 'python.exe'),
+    ]
+
+    for (const path of possiblePaths) {
+      if (existsSync(path)) {
+        console.log(`[Python] Found Python at: ${path}`)
+        return path
+      }
     }
   }
 
@@ -76,22 +109,20 @@ function findPythonExecutable(): string | null {
 }
 
 function getPythonApiPath(): string {
-  const projectRoot = join(__dirname, '..')
+  const projectRoot = getProjectRoot()
   
   if (is.dev) {
-    const devApiPath = join(projectRoot, '..', 'python-api', 'main.py')
+    const devApiPath = join(projectRoot, 'python-api', 'main.py')
     if (existsSync(devApiPath)) {
       console.log(`[Python] Found API at: ${devApiPath}`)
       return devApiPath
     }
-    return join(projectRoot, 'python-api', 'main.py')
+    return devApiPath
   }
 
   const possiblePaths = [
-    join(projectRoot, 'python-api', 'main.py'),
-    join(projectRoot, '..', 'python-api', 'main.py'),
     join(projectRoot, 'resources', 'python-api', 'main.py'),
-    join(projectRoot, '..', 'resources', 'python-api', 'main.py'),
+    join(projectRoot, 'python-api', 'main.py'),
   ]
 
   for (const path of possiblePaths) {
@@ -102,14 +133,34 @@ function getPythonApiPath(): string {
   }
 
   console.log('[Python] Using default API path')
-  return join(projectRoot, 'python-api', 'main.py')
+  return join(projectRoot, 'resources', 'python-api', 'main.py')
+}
+
+async function checkPortInUse(port: number): Promise<boolean> {
+  try {
+    const response = await fetch(`http://127.0.0.1:${port}/health`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(2000),
+    })
+    return response.ok
+  } catch {
+    return false
+  }
 }
 
 async function startPythonProcess(): Promise<void> {
+  // First check if Python API is already running
+  const alreadyRunning = await checkPortInUse(PYTHON_API_PORT)
+  if (alreadyRunning) {
+    console.log('[Python] Python API is already running on port', PYTHON_API_PORT)
+    pythonReady = true
+    return
+  }
+
   return new Promise((resolve, reject) => {
     const pythonPath = findPythonExecutable()
     const apiPath = getPythonApiPath()
-    const projectRoot = join(__dirname, '..')
+    const projectRoot = getProjectRoot()
 
     console.log(`[Python] Starting Python API server...`)
     console.log(`[Python] Python path: ${pythonPath}`)
@@ -129,10 +180,11 @@ async function startPythonProcess(): Promise<void> {
     const args = ['-m', 'uvicorn', 'main:app', '--host', PYTHON_API_HOST, '--port', String(PYTHON_API_PORT)]
     
     const apiDir = dirname(apiPath)
-    const v2Dir = is.dev ? join(projectRoot, '..', 'one_to_two_V2') : join(projectRoot, 'one_to_two_V2')
+    const v2Dir = is.dev ? join(projectRoot, 'one_to_two_V2') : join(projectRoot, 'resources', 'one_to_two_V2')
+    const apiDirForCwd = is.dev ? join(projectRoot, 'python-api') : join(projectRoot, 'resources', 'python-api')
 
     pythonProcess = spawn(pythonPath, args, {
-      cwd: apiDir,
+      cwd: apiDirForCwd,
       env: {
         ...process.env,
         PYTHONUNBUFFERED: '1',
@@ -158,6 +210,12 @@ async function startPythonProcess(): Promise<void> {
       if (output.includes('Uvicorn running') || output.includes('Application startup complete')) {
         pythonReady = true
         resolve()
+      }
+      
+      if (output.includes('error while attempting to bind') || output.includes('Address already in use') || output.includes('10048')) {
+        if (!pythonReady) {
+          reject(new Error(`Port ${PYTHON_API_PORT} is already in use. Please close other applications using this port or wait a moment and try again.`))
+        }
       }
     })
 
@@ -363,10 +421,12 @@ function createWindow(): void {
     titleBarStyle: 'hiddenInset',
     trafficLightPosition: { x: 15, y: 10 },
     webPreferences: {
-      preload: join(__dirname, '../preload/index.js'),
+      preload: join(__dirname, '../preload/index.cjs'),
       sandbox: false,
       contextIsolation: true,
       nodeIntegration: false,
+      // 使用内存分区避免缓存冲突
+      partition: 'persist:main',
     },
   })
 
@@ -380,7 +440,7 @@ function createWindow(): void {
   mainWindow.on('close', (event) => {
     if (!isQuitting) {
       event.preventDefault()
-      mainWindow?.hide()
+    mainWindow?.hide()
     }
   })
 

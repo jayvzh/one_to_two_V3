@@ -1,5 +1,9 @@
 import { contextBridge, ipcRenderer } from 'electron'
 
+console.log('[Preload] Script is executing...')
+console.log('[Preload] contextBridge available:', typeof contextBridge !== 'undefined')
+console.log('[Preload] ipcRenderer available:', typeof ipcRenderer !== 'undefined')
+
 export type ApiResponse<T = unknown> = {
   success: boolean
   data?: T

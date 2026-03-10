@@ -8,8 +8,13 @@ import sys
 import os
 
 V2_DIR = Path(__file__).parent.parent / "one_to_two_V2"
+API_DIR = Path(__file__).parent
+
 if str(V2_DIR) not in sys.path:
     sys.path.insert(0, str(V2_DIR))
+
+if str(API_DIR) not in sys.path:
+    sys.path.insert(0, str(API_DIR))
 
 os.chdir(V2_DIR)
 
@@ -20,6 +25,7 @@ from routes import router as api_router
 async def lifespan(app: FastAPI):
     print("Starting OneToTwo API Server...")
     print(f"Working directory: {V2_DIR}")
+    print(f"API directory: {API_DIR}")
     yield
     print("Shutting down OneToTwo API Server...")
 

@@ -25,14 +25,16 @@ export default defineConfig({
           index: resolve(__dirname, 'electron/preload.ts')
         },
         output: {
-          entryFileNames: '[name].js',
-          dir: 'out/preload'
+          entryFileNames: '[name].cjs',
+          dir: 'out/preload',
+          format: 'cjs'
         }
       }
     }
   },
   renderer: {
     root: resolve(__dirname, 'src/renderer'),
+    open: true,
     build: {
       rollupOptions: {
         input: {

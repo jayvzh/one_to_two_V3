@@ -1,0 +1,24 @@
+{
+  "train_start": "20251106",
+  "train_end": "20260205",
+  "sample_size": 4360,
+  "base_success_rate": 0.22935779816513763,
+  "features": [
+    "circ_mv",
+    "turnover",
+    "amount",
+    "first_seal_minutes",
+    "is_early_seal",
+    "open_times",
+    "is_limit_up",
+    "success_rate",
+    "first_board_ratio",
+    "index_return"
+  ],
+  "model_type": "logistic_regression",
+  "version": "2026-03-08",
+  "cache_start": null,
+  "cache_end": null,
+  "train_months_requested": null,
+  "train_months_actual": null
+}

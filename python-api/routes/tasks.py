@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from typing import Optional
 
-from ..models.tasks import TaskManager
+from models.tasks import TaskManager
 
 router = APIRouter()
 task_manager = TaskManager()

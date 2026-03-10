@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 
-from ..services import SchedulerService
+from services import SchedulerService
 
 router = APIRouter()
 scheduler_service = SchedulerService()

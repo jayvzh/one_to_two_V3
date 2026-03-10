@@ -1,0 +1,5835 @@
+{
+  "start_date": "20260206",
+  "end_date": "20260306",
+  "total_samples": 807,
+  "total_days": 14,
+  "duration_seconds": 0.7831752300262451,
+  "records": [
+    {
+      "date": "20260206",
+      "symbol": "000767",
+      "emotion_score": 2.0,
+      "model_score": 0.648358257019341,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "001360",
+      "emotion_score": 2.0,
+      "model_score": 0.689444268427378,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002009",
+      "emotion_score": 2.0,
+      "model_score": 0.6351760562564113,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002015",
+      "emotion_score": 2.0,
+      "model_score": 0.4396270868419328,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "002054",
+      "emotion_score": 2.0,
+      "model_score": 0.658339288771761,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "002072",
+      "emotion_score": 2.0,
+      "model_score": 0.39335009087851075,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002099",
+      "emotion_score": 2.0,
+      "model_score": 0.5133226303353086,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "002112",
+      "emotion_score": 2.0,
+      "model_score": 0.6483412200045876,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002150",
+      "emotion_score": 2.0,
+      "model_score": 0.5432653835406521,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002207",
+      "emotion_score": 2.0,
+      "model_score": 0.36180233199801815,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002339",
+      "emotion_score": 2.0,
+      "model_score": 0.6781089264780938,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002345",
+      "emotion_score": 2.0,
+      "model_score": 0.564291175121963,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002412",
+      "emotion_score": 2.0,
+      "model_score": 0.5911233919295361,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002440",
+      "emotion_score": 2.0,
+      "model_score": 0.6712263684586766,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "002455",
+      "emotion_score": 2.0,
+      "model_score": 0.6119921729181859,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "002519",
+      "emotion_score": 2.0,
+      "model_score": 0.33328765580460695,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002624",
+      "emotion_score": 2.0,
+      "model_score": 0.39148157519826693,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "002634",
+      "emotion_score": 2.0,
+      "model_score": 0.7112419022059022,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002728",
+      "emotion_score": 2.0,
+      "model_score": 0.6846706311522344,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002759",
+      "emotion_score": 2.0,
+      "model_score": 0.5047083150121976,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002772",
+      "emotion_score": 2.0,
+      "model_score": 0.6699399957689461,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002812",
+      "emotion_score": 2.0,
+      "model_score": 0.42850545258428735,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002830",
+      "emotion_score": 2.0,
+      "model_score": 0.626889393281547,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "002842",
+      "emotion_score": 2.0,
+      "model_score": 0.6480590402863394,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002921",
+      "emotion_score": 2.0,
+      "model_score": 0.7049220581924955,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "002957",
+      "emotion_score": 2.0,
+      "model_score": 0.43028329196488696,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "301312",
+      "emotion_score": 2.0,
+      "model_score": 0.41000089135239276,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "600063",
+      "emotion_score": 2.0,
+      "model_score": 0.5379219688473481,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "600230",
+      "emotion_score": 2.0,
+      "model_score": 0.6722430999735729,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "600345",
+      "emotion_score": 2.0,
+      "model_score": 0.671447509316845,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "600686",
+      "emotion_score": 2.0,
+      "model_score": 0.6739513687527969,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "600722",
+      "emotion_score": 2.0,
+      "model_score": 0.670025574337718,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "600759",
+      "emotion_score": 2.0,
+      "model_score": 0.37564627419772517,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "600884",
+      "emotion_score": 2.0,
+      "model_score": 0.665350967525462,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "600987",
+      "emotion_score": 2.0,
+      "model_score": 0.4234416948246429,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603138",
+      "emotion_score": 2.0,
+      "model_score": 0.6774981169440647,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603331",
+      "emotion_score": 2.0,
+      "model_score": 0.6514109486587147,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603607",
+      "emotion_score": 2.0,
+      "model_score": 0.5548781876751092,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603618",
+      "emotion_score": 2.0,
+      "model_score": 0.6669464204713144,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603626",
+      "emotion_score": 2.0,
+      "model_score": 0.4258614130346981,
+      "success": 1
+    },
+    {
+      "date": "20260206",
+      "symbol": "603663",
+      "emotion_score": 2.0,
+      "model_score": 0.43022354794479867,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603667",
+      "emotion_score": 2.0,
+      "model_score": 0.6297293739791564,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603823",
+      "emotion_score": 2.0,
+      "model_score": 0.6812568713245035,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603876",
+      "emotion_score": 2.0,
+      "model_score": 0.45520625935879255,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603881",
+      "emotion_score": 2.0,
+      "model_score": 0.40966118846593647,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "603959",
+      "emotion_score": 2.0,
+      "model_score": 0.6731856846793267,
+      "success": 0
+    },
+    {
+      "date": "20260206",
+      "symbol": "605488",
+      "emotion_score": 2.0,
+      "model_score": 0.665489675570293,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "000014",
+      "emotion_score": 2.5,
+      "model_score": 0.7179552524776779,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "000016",
+      "emotion_score": 2.5,
+      "model_score": 0.5537719927500048,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "000525",
+      "emotion_score": 2.5,
+      "model_score": 0.36927068255968326,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "000571",
+      "emotion_score": 2.5,
+      "model_score": 0.6739447301643893,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "000892",
+      "emotion_score": 2.5,
+      "model_score": 0.7159187586317346,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "001217",
+      "emotion_score": 2.5,
+      "model_score": 0.39497292506571274,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "001266",
+      "emotion_score": 2.5,
+      "model_score": 0.6603841645519358,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "001326",
+      "emotion_score": 2.5,
+      "model_score": 0.5463478197661558,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "001330",
+      "emotion_score": 2.5,
+      "model_score": 0.6657451979159715,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "002079",
+      "emotion_score": 2.5,
+      "model_score": 0.45044130441586727,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002129",
+      "emotion_score": 2.5,
+      "model_score": 0.6660091591935848,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002218",
+      "emotion_score": 2.5,
+      "model_score": 0.6095504294524942,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002272",
+      "emotion_score": 2.5,
+      "model_score": 0.5219657963709601,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002296",
+      "emotion_score": 2.5,
+      "model_score": 0.689611679470215,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002309",
+      "emotion_score": 2.5,
+      "model_score": 0.6884571022371613,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002323",
+      "emotion_score": 2.5,
+      "model_score": 0.6991521213783758,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "002429",
+      "emotion_score": 2.5,
+      "model_score": 0.7017384568209871,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "002438",
+      "emotion_score": 2.5,
+      "model_score": 0.7009740927275304,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002471",
+      "emotion_score": 2.5,
+      "model_score": 0.33503694641836446,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002501",
+      "emotion_score": 2.5,
+      "model_score": 0.6800725173980838,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002534",
+      "emotion_score": 2.5,
+      "model_score": 0.6992208675146571,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002623",
+      "emotion_score": 2.5,
+      "model_score": 0.6923529988693528,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "002716",
+      "emotion_score": 2.5,
+      "model_score": 0.395499565437713,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "300182",
+      "emotion_score": 2.5,
+      "model_score": 0.6348329247619017,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "300364",
+      "emotion_score": 2.5,
+      "model_score": 0.697350257121529,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "300480",
+      "emotion_score": 2.5,
+      "model_score": 0.383976611243394,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "300749",
+      "emotion_score": 2.5,
+      "model_score": 0.48878993116293246,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "300982",
+      "emotion_score": 2.5,
+      "model_score": 0.6893681366187515,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "301231",
+      "emotion_score": 2.5,
+      "model_score": 0.7141199219295528,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "301232",
+      "emotion_score": 2.5,
+      "model_score": 0.372385315727591,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "301262",
+      "emotion_score": 2.5,
+      "model_score": 0.6778837931322004,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600172",
+      "emotion_score": 2.5,
+      "model_score": 0.6743069328415805,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600185",
+      "emotion_score": 2.5,
+      "model_score": 0.4218483507934504,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600330",
+      "emotion_score": 2.5,
+      "model_score": 0.6542784686329436,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600392",
+      "emotion_score": 2.5,
+      "model_score": 0.6530220949143942,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600477",
+      "emotion_score": 2.5,
+      "model_score": 0.6944572846588088,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600586",
+      "emotion_score": 2.5,
+      "model_score": 0.7154324505672677,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600589",
+      "emotion_score": 2.5,
+      "model_score": 0.6948199296685049,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "600590",
+      "emotion_score": 2.5,
+      "model_score": 0.5294807576854884,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600666",
+      "emotion_score": 2.5,
+      "model_score": 0.6663114138439994,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600683",
+      "emotion_score": 2.5,
+      "model_score": 0.3768940696759407,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600751",
+      "emotion_score": 2.5,
+      "model_score": 0.6123269969505029,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600841",
+      "emotion_score": 2.5,
+      "model_score": 0.6518125123038506,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "600875",
+      "emotion_score": 2.5,
+      "model_score": 0.49294093191942806,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "601360",
+      "emotion_score": 2.5,
+      "model_score": 0.4045478510517801,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "601595",
+      "emotion_score": 2.5,
+      "model_score": 0.7137480872733662,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "601869",
+      "emotion_score": 2.5,
+      "model_score": 0.4861826257618555,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "603031",
+      "emotion_score": 2.5,
+      "model_score": 0.6808954084632148,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "603103",
+      "emotion_score": 2.5,
+      "model_score": 0.6641834704595063,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "603163",
+      "emotion_score": 2.5,
+      "model_score": 0.5396073606516502,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "603188",
+      "emotion_score": 2.5,
+      "model_score": 0.6972176457018,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "603191",
+      "emotion_score": 2.5,
+      "model_score": 0.5480163769898305,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "603301",
+      "emotion_score": 2.5,
+      "model_score": 0.698001500668651,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "603308",
+      "emotion_score": 2.5,
+      "model_score": 0.6500953099248772,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "603466",
+      "emotion_score": 2.5,
+      "model_score": 0.713862242238987,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "603533",
+      "emotion_score": 2.5,
+      "model_score": 0.7160295684765456,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "603598",
+      "emotion_score": 2.5,
+      "model_score": 0.5090627899680976,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "603629",
+      "emotion_score": 2.5,
+      "model_score": 0.34571438014109634,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "603729",
+      "emotion_score": 2.5,
+      "model_score": 0.7193419628128234,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "603829",
+      "emotion_score": 2.5,
+      "model_score": 0.7117281163968127,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "603929",
+      "emotion_score": 2.5,
+      "model_score": 0.4562637652288867,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "603980",
+      "emotion_score": 2.5,
+      "model_score": 0.7203120424017952,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "605060",
+      "emotion_score": 2.5,
+      "model_score": 0.6733745438886687,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "605287",
+      "emotion_score": 2.5,
+      "model_score": 0.7191401325530357,
+      "success": 1
+    },
+    {
+      "date": "20260209",
+      "symbol": "605566",
+      "emotion_score": 2.5,
+      "model_score": 0.4345548539794212,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "605598",
+      "emotion_score": 2.5,
+      "model_score": 0.694816422716798,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "688025",
+      "emotion_score": 2.5,
+      "model_score": 0.6712922357314327,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "688435",
+      "emotion_score": 2.5,
+      "model_score": 0.3606443943904998,
+      "success": 0
+    },
+    {
+      "date": "20260209",
+      "symbol": "688503",
+      "emotion_score": 2.5,
+      "model_score": 0.541924003815763,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "000056",
+      "emotion_score": 1.0,
+      "model_score": 0.5669722790171681,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "000070",
+      "emotion_score": 1.0,
+      "model_score": 0.7065246824687896,
+      "success": 1
+    },
+    {
+      "date": "20260210",
+      "symbol": "000156",
+      "emotion_score": 1.0,
+      "model_score": 0.6947841125829767,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "000559",
+      "emotion_score": 1.0,
+      "model_score": 0.4070738644424612,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "000681",
+      "emotion_score": 1.0,
+      "model_score": 0.49149106514787627,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "000815",
+      "emotion_score": 1.0,
+      "model_score": 0.6393497556287122,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "000818",
+      "emotion_score": 1.0,
+      "model_score": 0.546410556445396,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "000839",
+      "emotion_score": 1.0,
+      "model_score": 0.6844752431000667,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "000859",
+      "emotion_score": 1.0,
+      "model_score": 0.6808966924616682,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002082",
+      "emotion_score": 1.0,
+      "model_score": 0.6856542334283352,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002159",
+      "emotion_score": 1.0,
+      "model_score": 0.49565264795969893,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002181",
+      "emotion_score": 1.0,
+      "model_score": 0.3729184822565423,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002292",
+      "emotion_score": 1.0,
+      "model_score": 0.4860874776695579,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002302",
+      "emotion_score": 1.0,
+      "model_score": 0.3939296529297744,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002597",
+      "emotion_score": 1.0,
+      "model_score": 0.44844175097033573,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002655",
+      "emotion_score": 1.0,
+      "model_score": 0.6587185492127285,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002723",
+      "emotion_score": 1.0,
+      "model_score": 0.7181897365342331,
+      "success": 1
+    },
+    {
+      "date": "20260210",
+      "symbol": "002739",
+      "emotion_score": 1.0,
+      "model_score": 0.3682659042531039,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002806",
+      "emotion_score": 1.0,
+      "model_score": 0.6415338359141447,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002905",
+      "emotion_score": 1.0,
+      "model_score": 0.6687418845706402,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "002969",
+      "emotion_score": 1.0,
+      "model_score": 0.37155906758858415,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "300251",
+      "emotion_score": 1.0,
+      "model_score": 0.5124438952113564,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "300528",
+      "emotion_score": 1.0,
+      "model_score": 0.4763867878522967,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "301025",
+      "emotion_score": 1.0,
+      "model_score": 0.65032980798148,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "301085",
+      "emotion_score": 1.0,
+      "model_score": 0.623563414253747,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "600088",
+      "emotion_score": 1.0,
+      "model_score": 0.5174693268794403,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "600207",
+      "emotion_score": 1.0,
+      "model_score": 0.547945021423344,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "600482",
+      "emotion_score": 1.0,
+      "model_score": 0.40979532303947636,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "600715",
+      "emotion_score": 1.0,
+      "model_score": 0.7042145552901526,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "600977",
+      "emotion_score": 1.0,
+      "model_score": 0.5320845810282068,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "601599",
+      "emotion_score": 1.0,
+      "model_score": 0.6693391720636764,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "603000",
+      "emotion_score": 1.0,
+      "model_score": 0.7041670387903896,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "603058",
+      "emotion_score": 1.0,
+      "model_score": 0.6849103221226361,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "603115",
+      "emotion_score": 1.0,
+      "model_score": 0.6988973813914344,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "603320",
+      "emotion_score": 1.0,
+      "model_score": 0.693282776147375,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "603888",
+      "emotion_score": 1.0,
+      "model_score": 0.6730605091112009,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "603960",
+      "emotion_score": 1.0,
+      "model_score": 0.6565802795100089,
+      "success": 0
+    },
+    {
+      "date": "20260210",
+      "symbol": "603968",
+      "emotion_score": 1.0,
+      "model_score": 0.5279199216617586,
+      "success": 1
+    },
+    {
+      "date": "20260210",
+      "symbol": "603999",
+      "emotion_score": 1.0,
+      "model_score": 0.677852522856656,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "000510",
+      "emotion_score": 4.0,
+      "model_score": 0.6710552834479699,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "000657",
+      "emotion_score": 4.0,
+      "model_score": 0.425523670385133,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "000659",
+      "emotion_score": 4.0,
+      "model_score": 0.5157692204725784,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "000962",
+      "emotion_score": 4.0,
+      "model_score": 0.5459820935179243,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "001217",
+      "emotion_score": 4.0,
+      "model_score": 0.7118179946675273,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "001267",
+      "emotion_score": 4.0,
+      "model_score": 0.40071488468519206,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "001359",
+      "emotion_score": 4.0,
+      "model_score": 0.407234587973491,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "001376",
+      "emotion_score": 4.0,
+      "model_score": 0.4241922772893877,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "001896",
+      "emotion_score": 4.0,
+      "model_score": 0.7173400391565791,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "002080",
+      "emotion_score": 4.0,
+      "model_score": 0.6835866043602404,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "002254",
+      "emotion_score": 4.0,
+      "model_score": 0.43616913500862176,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "002270",
+      "emotion_score": 4.0,
+      "model_score": 0.5365988752351354,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "002340",
+      "emotion_score": 4.0,
+      "model_score": 0.49997974287333535,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "002378",
+      "emotion_score": 4.0,
+      "model_score": 0.6747714856127912,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "002470",
+      "emotion_score": 4.0,
+      "model_score": 0.5248364624749151,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "002757",
+      "emotion_score": 4.0,
+      "model_score": 0.6979454408577496,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "002842",
+      "emotion_score": 4.0,
+      "model_score": 0.6930347079263738,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "002951",
+      "emotion_score": 4.0,
+      "model_score": 0.6979946057089662,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "003018",
+      "emotion_score": 4.0,
+      "model_score": 0.4879491347376213,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "300819",
+      "emotion_score": 4.0,
+      "model_score": 0.683070061323359,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "301526",
+      "emotion_score": 4.0,
+      "model_score": 0.6899131967917971,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "600176",
+      "emotion_score": 4.0,
+      "model_score": 0.6553120208104205,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "600186",
+      "emotion_score": 4.0,
+      "model_score": 0.6567507613626534,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "600292",
+      "emotion_score": 4.0,
+      "model_score": 0.6566965214087153,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "600397",
+      "emotion_score": 4.0,
+      "model_score": 0.6740209838009659,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "600545",
+      "emotion_score": 4.0,
+      "model_score": 0.663170231112739,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "600583",
+      "emotion_score": 4.0,
+      "model_score": 0.4065211788105757,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "600722",
+      "emotion_score": 4.0,
+      "model_score": 0.5003258446978003,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "600980",
+      "emotion_score": 4.0,
+      "model_score": 0.6686876785728604,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "601121",
+      "emotion_score": 4.0,
+      "model_score": 0.43998792658352404,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "603125",
+      "emotion_score": 4.0,
+      "model_score": 0.4624762888102976,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "603138",
+      "emotion_score": 4.0,
+      "model_score": 0.6849736132763182,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "603256",
+      "emotion_score": 4.0,
+      "model_score": 0.6885456654747318,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "603601",
+      "emotion_score": 4.0,
+      "model_score": 0.6702565683945918,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "603608",
+      "emotion_score": 4.0,
+      "model_score": 0.6856865796022266,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "603629",
+      "emotion_score": 4.0,
+      "model_score": 0.5692733121329272,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "603682",
+      "emotion_score": 4.0,
+      "model_score": 0.7026796828881328,
+      "success": 0
+    },
+    {
+      "date": "20260211",
+      "symbol": "605006",
+      "emotion_score": 4.0,
+      "model_score": 0.7140708415597868,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "605033",
+      "emotion_score": 4.0,
+      "model_score": 0.6974103260288057,
+      "success": 1
+    },
+    {
+      "date": "20260211",
+      "symbol": "688035",
+      "emotion_score": 4.0,
+      "model_score": 0.6137066667065233,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "001217",
+      "emotion_score": 1.0,
+      "model_score": 0.7118179978068985,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002757",
+      "emotion_score": 1.0,
+      "model_score": 0.6979454331134223,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603608",
+      "emotion_score": 1.0,
+      "model_score": 0.6856865843182559,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600176",
+      "emotion_score": 1.0,
+      "model_score": 0.6553118112815857,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "301526",
+      "emotion_score": 1.0,
+      "model_score": 0.6899131992169696,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "300819",
+      "emotion_score": 1.0,
+      "model_score": 0.6830700609646149,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603601",
+      "emotion_score": 1.0,
+      "model_score": 0.6702566339470796,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603682",
+      "emotion_score": 1.0,
+      "model_score": 0.7026796781878144,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600186",
+      "emotion_score": 1.0,
+      "model_score": 0.6567506511825106,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603629",
+      "emotion_score": 1.0,
+      "model_score": 0.569273437531328,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "000510",
+      "emotion_score": 1.0,
+      "model_score": 0.6710552810492846,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600980",
+      "emotion_score": 1.0,
+      "model_score": 0.6686876754470539,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600292",
+      "emotion_score": 1.0,
+      "model_score": 0.6566965383908874,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "688035",
+      "emotion_score": 1.0,
+      "model_score": 0.6137065726360041,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "000659",
+      "emotion_score": 1.0,
+      "model_score": 0.5157691380567132,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002340",
+      "emotion_score": 1.0,
+      "model_score": 0.4999797330685936,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "003018",
+      "emotion_score": 1.0,
+      "model_score": 0.4879490364773797,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002270",
+      "emotion_score": 1.0,
+      "model_score": 0.5365988873562382,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603125",
+      "emotion_score": 1.0,
+      "model_score": 0.4624762170221021,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600722",
+      "emotion_score": 1.0,
+      "model_score": 0.5003259198350822,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002470",
+      "emotion_score": 1.0,
+      "model_score": 0.5248364645609063,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "000657",
+      "emotion_score": 1.0,
+      "model_score": 0.4255236669791823,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "601121",
+      "emotion_score": 1.0,
+      "model_score": 0.43998792575537443,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "001376",
+      "emotion_score": 1.0,
+      "model_score": 0.42419231695346105,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002254",
+      "emotion_score": 1.0,
+      "model_score": 0.43616909719411406,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600583",
+      "emotion_score": 1.0,
+      "model_score": 0.4065211750556608,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "001267",
+      "emotion_score": 1.0,
+      "model_score": 0.4007149451691295,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "001359",
+      "emotion_score": 1.0,
+      "model_score": 0.407234578263107,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "000533",
+      "emotion_score": 1.0,
+      "model_score": 0.6617078243214447,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "000628",
+      "emotion_score": 1.0,
+      "model_score": 0.30918183774468283,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "000767",
+      "emotion_score": 1.0,
+      "model_score": 0.6748509434797013,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "000833",
+      "emotion_score": 1.0,
+      "model_score": 0.6609071000407682,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002131",
+      "emotion_score": 1.0,
+      "model_score": 0.38633128036880265,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002208",
+      "emotion_score": 1.0,
+      "model_score": 0.37889374842490087,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002248",
+      "emotion_score": 1.0,
+      "model_score": 0.6562400164720603,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002272",
+      "emotion_score": 1.0,
+      "model_score": 0.6999424593871615,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002364",
+      "emotion_score": 1.0,
+      "model_score": 0.527705889267174,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002478",
+      "emotion_score": 1.0,
+      "model_score": 0.5498892384173141,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002498",
+      "emotion_score": 1.0,
+      "model_score": 0.5141960302407917,
+      "success": 1
+    },
+    {
+      "date": "20260212",
+      "symbol": "002518",
+      "emotion_score": 1.0,
+      "model_score": 0.5306024371636497,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002520",
+      "emotion_score": 1.0,
+      "model_score": 0.6441769666006659,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002796",
+      "emotion_score": 1.0,
+      "model_score": 0.42430901790025655,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002824",
+      "emotion_score": 1.0,
+      "model_score": 0.6823906450699602,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002837",
+      "emotion_score": 1.0,
+      "model_score": 0.6374533239187461,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002885",
+      "emotion_score": 1.0,
+      "model_score": 0.5075514789519208,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002922",
+      "emotion_score": 1.0,
+      "model_score": 0.4558258769217885,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "002975",
+      "emotion_score": 1.0,
+      "model_score": 0.6831759639797316,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "300277",
+      "emotion_score": 1.0,
+      "model_score": 0.5308836809116991,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "300846",
+      "emotion_score": 1.0,
+      "model_score": 0.3826524838043565,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "301317",
+      "emotion_score": 1.0,
+      "model_score": 0.6301636931424652,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600026",
+      "emotion_score": 1.0,
+      "model_score": 0.5067229286677475,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600481",
+      "emotion_score": 1.0,
+      "model_score": 0.4299874718150004,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600490",
+      "emotion_score": 1.0,
+      "model_score": 0.6710059390266806,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600673",
+      "emotion_score": 1.0,
+      "model_score": 0.49293461261561156,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600821",
+      "emotion_score": 1.0,
+      "model_score": 0.7082454208178152,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "600960",
+      "emotion_score": 1.0,
+      "model_score": 0.5217496401139918,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "601126",
+      "emotion_score": 1.0,
+      "model_score": 0.5320920024540027,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "601231",
+      "emotion_score": 1.0,
+      "model_score": 0.6552475198928325,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "601619",
+      "emotion_score": 1.0,
+      "model_score": 0.45074701742190615,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "601872",
+      "emotion_score": 1.0,
+      "model_score": 0.642470739051543,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603088",
+      "emotion_score": 1.0,
+      "model_score": 0.6928888612579734,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603090",
+      "emotion_score": 1.0,
+      "model_score": 0.4607421571979483,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603191",
+      "emotion_score": 1.0,
+      "model_score": 0.6620220504188661,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603308",
+      "emotion_score": 1.0,
+      "model_score": 0.5289255233815641,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603688",
+      "emotion_score": 1.0,
+      "model_score": 0.6582914903534778,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603757",
+      "emotion_score": 1.0,
+      "model_score": 0.7104029538915808,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "603950",
+      "emotion_score": 1.0,
+      "model_score": 0.693563370868935,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "605018",
+      "emotion_score": 1.0,
+      "model_score": 0.43746255398479406,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "605318",
+      "emotion_score": 1.0,
+      "model_score": 0.4392064609300355,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "688158",
+      "emotion_score": 1.0,
+      "model_score": 0.48818767148878944,
+      "success": 0
+    },
+    {
+      "date": "20260212",
+      "symbol": "688480",
+      "emotion_score": 1.0,
+      "model_score": 0.5386536129090033,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "603757",
+      "emotion_score": 2.0,
+      "model_score": 0.7104029461181559,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002272",
+      "emotion_score": 2.0,
+      "model_score": 0.6999424537427068,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600821",
+      "emotion_score": 2.0,
+      "model_score": 0.7082454174284156,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "603950",
+      "emotion_score": 2.0,
+      "model_score": 0.6935633585994324,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002248",
+      "emotion_score": 2.0,
+      "model_score": 0.6562400933698016,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "601872",
+      "emotion_score": 2.0,
+      "model_score": 0.6424705479450499,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002837",
+      "emotion_score": 2.0,
+      "model_score": 0.63745330436006,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "603088",
+      "emotion_score": 2.0,
+      "model_score": 0.6928888640113525,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "000833",
+      "emotion_score": 2.0,
+      "model_score": 0.6609070218139056,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002975",
+      "emotion_score": 2.0,
+      "model_score": 0.6831759626441185,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "601231",
+      "emotion_score": 2.0,
+      "model_score": 0.6552477528690045,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002520",
+      "emotion_score": 2.0,
+      "model_score": 0.6441768556317393,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "000767",
+      "emotion_score": 2.0,
+      "model_score": 0.6748509205241182,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002824",
+      "emotion_score": 2.0,
+      "model_score": 0.682390652222473,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600490",
+      "emotion_score": 2.0,
+      "model_score": 0.6710059053884553,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "603688",
+      "emotion_score": 2.0,
+      "model_score": 0.6582914971716293,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "000533",
+      "emotion_score": 2.0,
+      "model_score": 0.6617077841259682,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "603191",
+      "emotion_score": 2.0,
+      "model_score": 0.6620220478294843,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "301317",
+      "emotion_score": 2.0,
+      "model_score": 0.6301637016704073,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "688158",
+      "emotion_score": 2.0,
+      "model_score": 0.4881876039012209,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600026",
+      "emotion_score": 2.0,
+      "model_score": 0.506722932583681,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002478",
+      "emotion_score": 2.0,
+      "model_score": 0.5498892756803602,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "300277",
+      "emotion_score": 2.0,
+      "model_score": 0.53088361187497,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "603308",
+      "emotion_score": 2.0,
+      "model_score": 0.5289255655770918,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002364",
+      "emotion_score": 2.0,
+      "model_score": 0.5277058798852318,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "601126",
+      "emotion_score": 2.0,
+      "model_score": 0.5320920194028149,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "688480",
+      "emotion_score": 2.0,
+      "model_score": 0.5386536086224113,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002518",
+      "emotion_score": 2.0,
+      "model_score": 0.5306024287534481,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600673",
+      "emotion_score": 2.0,
+      "model_score": 0.49293462352233014,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002885",
+      "emotion_score": 2.0,
+      "model_score": 0.5075515082946059,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600960",
+      "emotion_score": 2.0,
+      "model_score": 0.5217496483394874,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "603090",
+      "emotion_score": 2.0,
+      "model_score": 0.46074216675959573,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002922",
+      "emotion_score": 2.0,
+      "model_score": 0.45582586101896977,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "000628",
+      "emotion_score": 2.0,
+      "model_score": 0.3091818241109292,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "601619",
+      "emotion_score": 2.0,
+      "model_score": 0.4507469998682121,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "605318",
+      "emotion_score": 2.0,
+      "model_score": 0.4392064529300129,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "300846",
+      "emotion_score": 2.0,
+      "model_score": 0.38265258216739434,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600481",
+      "emotion_score": 2.0,
+      "model_score": 0.42998746530087634,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002796",
+      "emotion_score": 2.0,
+      "model_score": 0.4243089745738142,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "605018",
+      "emotion_score": 2.0,
+      "model_score": 0.43746255492006214,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002131",
+      "emotion_score": 2.0,
+      "model_score": 0.3863312562263941,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002208",
+      "emotion_score": 2.0,
+      "model_score": 0.3788937597012109,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "000021",
+      "emotion_score": 2.0,
+      "model_score": 0.38522309747128586,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "000798",
+      "emotion_score": 2.0,
+      "model_score": 0.6774998539585444,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "000839",
+      "emotion_score": 2.0,
+      "model_score": 0.7101353650327334,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "000859",
+      "emotion_score": 2.0,
+      "model_score": 0.6486385615584124,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "000890",
+      "emotion_score": 2.0,
+      "model_score": 0.5017707788154457,
+      "success": 1
+    },
+    {
+      "date": "20260213",
+      "symbol": "002009",
+      "emotion_score": 2.0,
+      "model_score": 0.45431140725445224,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002169",
+      "emotion_score": 2.0,
+      "model_score": 0.670004225289298,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002355",
+      "emotion_score": 2.0,
+      "model_score": 0.5292602017247687,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002510",
+      "emotion_score": 2.0,
+      "model_score": 0.6209070711503963,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002703",
+      "emotion_score": 2.0,
+      "model_score": 0.6715427688534197,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "002843",
+      "emotion_score": 2.0,
+      "model_score": 0.6877474422845667,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "300449",
+      "emotion_score": 2.0,
+      "model_score": 0.6691979322463463,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "300719",
+      "emotion_score": 2.0,
+      "model_score": 0.4906481702443945,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "300812",
+      "emotion_score": 2.0,
+      "model_score": 0.6077345820999083,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600410",
+      "emotion_score": 2.0,
+      "model_score": 0.6610353341329419,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600629",
+      "emotion_score": 2.0,
+      "model_score": 0.6913458695894117,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600791",
+      "emotion_score": 2.0,
+      "model_score": 0.6931408301924319,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600893",
+      "emotion_score": 2.0,
+      "model_score": 0.3578258903004835,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "600984",
+      "emotion_score": 2.0,
+      "model_score": 0.6747305387464846,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "601777",
+      "emotion_score": 2.0,
+      "model_score": 0.5163971750811006,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "601890",
+      "emotion_score": 2.0,
+      "model_score": 0.6907416655861849,
+      "success": 1
+    },
+    {
+      "date": "20260213",
+      "symbol": "603163",
+      "emotion_score": 2.0,
+      "model_score": 0.680809641153686,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "603331",
+      "emotion_score": 2.0,
+      "model_score": 0.681266004116526,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "603466",
+      "emotion_score": 2.0,
+      "model_score": 0.6115918032036148,
+      "success": 1
+    },
+    {
+      "date": "20260213",
+      "symbol": "603960",
+      "emotion_score": 2.0,
+      "model_score": 0.6295225321773823,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "605007",
+      "emotion_score": 2.0,
+      "model_score": 0.6889192949880345,
+      "success": 0
+    },
+    {
+      "date": "20260213",
+      "symbol": "605289",
+      "emotion_score": 2.0,
+      "model_score": 0.5221327974779397,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "000636",
+      "emotion_score": 1.0,
+      "model_score": 0.708186085157553,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "601872",
+      "emotion_score": 1.0,
+      "model_score": 0.6135068987573064,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "600026",
+      "emotion_score": 1.0,
+      "model_score": 0.5729894086120424,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "601975",
+      "emotion_score": 1.0,
+      "model_score": 0.6716633856506339,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600759",
+      "emotion_score": 1.0,
+      "model_score": 0.6949700016237632,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "603959",
+      "emotion_score": 1.0,
+      "model_score": 0.7048771292886565,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002207",
+      "emotion_score": 1.0,
+      "model_score": 0.7100004449134917,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "605006",
+      "emotion_score": 1.0,
+      "model_score": 0.7108400109760472,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002506",
+      "emotion_score": 1.0,
+      "model_score": 0.5556482802730107,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002490",
+      "emotion_score": 1.0,
+      "model_score": 0.709829876159756,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "300164",
+      "emotion_score": 1.0,
+      "model_score": 0.6676869386990616,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600397",
+      "emotion_score": 1.0,
+      "model_score": 0.6551043482522586,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "603124",
+      "emotion_score": 1.0,
+      "model_score": 0.7124113471479068,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "603619",
+      "emotion_score": 1.0,
+      "model_score": 0.7080022003237508,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600078",
+      "emotion_score": 1.0,
+      "model_score": 0.7113227091361226,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "000554",
+      "emotion_score": 1.0,
+      "model_score": 0.7043928113383325,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002828",
+      "emotion_score": 1.0,
+      "model_score": 0.6821014707796115,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002470",
+      "emotion_score": 1.0,
+      "model_score": 0.6727374969902106,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "002716",
+      "emotion_score": 1.0,
+      "model_score": 0.6672737599611802,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600871",
+      "emotion_score": 1.0,
+      "model_score": 0.6407173952173982,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600722",
+      "emotion_score": 1.0,
+      "model_score": 0.6906568598549809,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600339",
+      "emotion_score": 1.0,
+      "model_score": 0.6977053878419515,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002554",
+      "emotion_score": 1.0,
+      "model_score": 0.7067344472750766,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "300749",
+      "emotion_score": 1.0,
+      "model_score": 0.6245939135461496,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "003035",
+      "emotion_score": 1.0,
+      "model_score": 0.7022435061001989,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "605178",
+      "emotion_score": 1.0,
+      "model_score": 0.698276092153665,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "603616",
+      "emotion_score": 1.0,
+      "model_score": 0.6739031158299493,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600714",
+      "emotion_score": 1.0,
+      "model_score": 0.7084175124063595,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002358",
+      "emotion_score": 1.0,
+      "model_score": 0.7029483743352546,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "000988",
+      "emotion_score": 1.0,
+      "model_score": 0.6431096247321941,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600330",
+      "emotion_score": 1.0,
+      "model_score": 0.6983518910088161,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600671",
+      "emotion_score": 1.0,
+      "model_score": 0.6912161048115731,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "300157",
+      "emotion_score": 1.0,
+      "model_score": 0.6740709404423414,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "603727",
+      "emotion_score": 1.0,
+      "model_score": 0.7070178754080324,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "688260",
+      "emotion_score": 1.0,
+      "model_score": 0.6756855467744768,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002795",
+      "emotion_score": 1.0,
+      "model_score": 0.689593701311045,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "000545",
+      "emotion_score": 1.0,
+      "model_score": 0.6916409835723847,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "603077",
+      "emotion_score": 1.0,
+      "model_score": 0.6763492447720473,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "601212",
+      "emotion_score": 1.0,
+      "model_score": 0.5871406119577449,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "603256",
+      "emotion_score": 1.0,
+      "model_score": 0.674438708097094,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "603601",
+      "emotion_score": 1.0,
+      "model_score": 0.5929952786725726,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "603042",
+      "emotion_score": 1.0,
+      "model_score": 0.6759425657067836,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "601015",
+      "emotion_score": 1.0,
+      "model_score": 0.6910450612306533,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600345",
+      "emotion_score": 1.0,
+      "model_score": 0.6868889149593971,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "001337",
+      "emotion_score": 1.0,
+      "model_score": 0.5772581930286628,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600550",
+      "emotion_score": 1.0,
+      "model_score": 0.6723793708257914,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "601808",
+      "emotion_score": 1.0,
+      "model_score": 0.6764694662039498,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "601390",
+      "emotion_score": 1.0,
+      "model_score": 0.5585466383566734,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "301526",
+      "emotion_score": 1.0,
+      "model_score": 0.6420681847591706,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "601869",
+      "emotion_score": 1.0,
+      "model_score": 0.6345072814491205,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002916",
+      "emotion_score": 1.0,
+      "model_score": 0.375657549016257,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "000968",
+      "emotion_score": 1.0,
+      "model_score": 0.6789904310419635,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002491",
+      "emotion_score": 1.0,
+      "model_score": 0.6518627749383639,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "603685",
+      "emotion_score": 1.0,
+      "model_score": 0.6444274833812719,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600172",
+      "emotion_score": 1.0,
+      "model_score": 0.6419494892597469,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002165",
+      "emotion_score": 1.0,
+      "model_score": 0.5365827885338722,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002136",
+      "emotion_score": 1.0,
+      "model_score": 0.5519667564484314,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "000635",
+      "emotion_score": 1.0,
+      "model_score": 0.5662121578192012,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002809",
+      "emotion_score": 1.0,
+      "model_score": 0.5451875439997691,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002457",
+      "emotion_score": 1.0,
+      "model_score": 0.5467481419980507,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002875",
+      "emotion_score": 1.0,
+      "model_score": 0.5442189010542119,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002312",
+      "emotion_score": 1.0,
+      "model_score": 0.5401941354372591,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600176",
+      "emotion_score": 1.0,
+      "model_score": 0.477724721311711,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002811",
+      "emotion_score": 1.0,
+      "model_score": 0.5213775814844938,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "001396",
+      "emotion_score": 1.0,
+      "model_score": 0.46347652767359915,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "600409",
+      "emotion_score": 1.0,
+      "model_score": 0.38381234352633437,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "000803",
+      "emotion_score": 1.0,
+      "model_score": 0.4689203624246231,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002283",
+      "emotion_score": 1.0,
+      "model_score": 0.4248464307297474,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "603139",
+      "emotion_score": 1.0,
+      "model_score": 0.45878766804318366,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600792",
+      "emotion_score": 1.0,
+      "model_score": 0.4563597934154303,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "603861",
+      "emotion_score": 1.0,
+      "model_score": 0.4485309875502951,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "000422",
+      "emotion_score": 1.0,
+      "model_score": 0.44033186846843164,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "603115",
+      "emotion_score": 1.0,
+      "model_score": 0.4497349797401431,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600470",
+      "emotion_score": 1.0,
+      "model_score": 0.44492750332395786,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "603400",
+      "emotion_score": 1.0,
+      "model_score": 0.3682396194943424,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002539",
+      "emotion_score": 1.0,
+      "model_score": 0.44308663203171306,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "600096",
+      "emotion_score": 1.0,
+      "model_score": 0.38108545400381527,
+      "success": 1
+    },
+    {
+      "date": "20260224",
+      "symbol": "600141",
+      "emotion_score": 1.0,
+      "model_score": 0.2875178390056119,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "300179",
+      "emotion_score": 1.0,
+      "model_score": 0.34638650810744676,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002895",
+      "emotion_score": 1.0,
+      "model_score": 0.4099787031283437,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002606",
+      "emotion_score": 1.0,
+      "model_score": 0.3824406778303755,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002694",
+      "emotion_score": 1.0,
+      "model_score": 0.40945362914877986,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "002652",
+      "emotion_score": 1.0,
+      "model_score": 0.3936039019886347,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "300191",
+      "emotion_score": 1.0,
+      "model_score": 0.36958035868444006,
+      "success": 0
+    },
+    {
+      "date": "20260224",
+      "symbol": "000603",
+      "emotion_score": 1.0,
+      "model_score": 0.3763939548036297,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002725",
+      "emotion_score": 1.0,
+      "model_score": 0.7143769875171516,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002428",
+      "emotion_score": 1.0,
+      "model_score": 0.6996186468697063,
+      "success": 1
+    },
+    {
+      "date": "20260225",
+      "symbol": "600649",
+      "emotion_score": 1.0,
+      "model_score": 0.6674966750635797,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "301100",
+      "emotion_score": 1.0,
+      "model_score": 0.6978317368383268,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600227",
+      "emotion_score": 1.0,
+      "model_score": 0.6936012634917783,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600110",
+      "emotion_score": 1.0,
+      "model_score": 0.6861064715574287,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600545",
+      "emotion_score": 1.0,
+      "model_score": 0.6780965627699014,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000758",
+      "emotion_score": 1.0,
+      "model_score": 0.7023862171246298,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000839",
+      "emotion_score": 1.0,
+      "model_score": 0.6979467338056057,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002021",
+      "emotion_score": 1.0,
+      "model_score": 0.7035406956680013,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000012",
+      "emotion_score": 1.0,
+      "model_score": 0.6957608585520235,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002348",
+      "emotion_score": 1.0,
+      "model_score": 0.6972804002046038,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "300437",
+      "emotion_score": 1.0,
+      "model_score": 0.647426872854008,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600569",
+      "emotion_score": 1.0,
+      "model_score": 0.6833073471019588,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "603057",
+      "emotion_score": 1.0,
+      "model_score": 0.6816594874133353,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000751",
+      "emotion_score": 1.0,
+      "model_score": 0.6777316739956649,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000056",
+      "emotion_score": 1.0,
+      "model_score": 0.6756073827045124,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "605007",
+      "emotion_score": 1.0,
+      "model_score": 0.6834195563931662,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600301",
+      "emotion_score": 1.0,
+      "model_score": 0.676143282214516,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000816",
+      "emotion_score": 1.0,
+      "model_score": 0.6749034269842814,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000899",
+      "emotion_score": 1.0,
+      "model_score": 0.687897984716697,
+      "success": 1
+    },
+    {
+      "date": "20260225",
+      "symbol": "002538",
+      "emotion_score": 1.0,
+      "model_score": 0.6844261572464586,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "300821",
+      "emotion_score": 1.0,
+      "model_score": 0.6707213612872457,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600010",
+      "emotion_score": 1.0,
+      "model_score": 0.6509435539447634,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000560",
+      "emotion_score": 1.0,
+      "model_score": 0.6713254309034284,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "601068",
+      "emotion_score": 1.0,
+      "model_score": 0.6830567365659842,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "300505",
+      "emotion_score": 1.0,
+      "model_score": 0.5367189197625817,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002176",
+      "emotion_score": 1.0,
+      "model_score": 0.6678452032003754,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "001203",
+      "emotion_score": 1.0,
+      "model_score": 0.6598877136416135,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600230",
+      "emotion_score": 1.0,
+      "model_score": 0.666925598926418,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002378",
+      "emotion_score": 1.0,
+      "model_score": 0.5153826343338549,
+      "success": 1
+    },
+    {
+      "date": "20260225",
+      "symbol": "600884",
+      "emotion_score": 1.0,
+      "model_score": 0.32404941009487576,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002978",
+      "emotion_score": 1.0,
+      "model_score": 0.5584048852039479,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "300788",
+      "emotion_score": 1.0,
+      "model_score": 0.5185905272143513,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "301373",
+      "emotion_score": 1.0,
+      "model_score": 0.4458863578756742,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600111",
+      "emotion_score": 1.0,
+      "model_score": 0.43232636939927116,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000036",
+      "emotion_score": 1.0,
+      "model_score": 0.5364313599569824,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002998",
+      "emotion_score": 1.0,
+      "model_score": 0.5345134675695906,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002114",
+      "emotion_score": 1.0,
+      "model_score": 0.5290713864235331,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "603826",
+      "emotion_score": 1.0,
+      "model_score": 0.5390622376013997,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600337",
+      "emotion_score": 1.0,
+      "model_score": 0.5304097826873689,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000593",
+      "emotion_score": 1.0,
+      "model_score": 0.4552585139653919,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "688432",
+      "emotion_score": 1.0,
+      "model_score": 0.44740843926017265,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "601208",
+      "emotion_score": 1.0,
+      "model_score": 0.40187408432033717,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "001209",
+      "emotion_score": 1.0,
+      "model_score": 0.3986239024526626,
+      "success": 1
+    },
+    {
+      "date": "20260225",
+      "symbol": "000962",
+      "emotion_score": 1.0,
+      "model_score": 0.44386592857857454,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000657",
+      "emotion_score": 1.0,
+      "model_score": 0.3869070420444695,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000826",
+      "emotion_score": 1.0,
+      "model_score": 0.45053273920713505,
+      "success": 1
+    },
+    {
+      "date": "20260225",
+      "symbol": "000581",
+      "emotion_score": 1.0,
+      "model_score": 0.43963358657453416,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "688661",
+      "emotion_score": 1.0,
+      "model_score": 0.34154324878197,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002949",
+      "emotion_score": 1.0,
+      "model_score": 0.4324557047798885,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "600206",
+      "emotion_score": 1.0,
+      "model_score": 0.4254781978719302,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002678",
+      "emotion_score": 1.0,
+      "model_score": 0.43724556761592853,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000547",
+      "emotion_score": 1.0,
+      "model_score": 0.39770785452168383,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "002989",
+      "emotion_score": 1.0,
+      "model_score": 0.42022706050970665,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "300658",
+      "emotion_score": 1.0,
+      "model_score": 0.3563493629484252,
+      "success": 0
+    },
+    {
+      "date": "20260225",
+      "symbol": "000661",
+      "emotion_score": 1.0,
+      "model_score": 0.3648121835982399,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "000546",
+      "emotion_score": 2.0,
+      "model_score": 0.717475601627826,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002141",
+      "emotion_score": 2.0,
+      "model_score": 0.693658756309073,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002843",
+      "emotion_score": 2.0,
+      "model_score": 0.6811034527194916,
+      "success": 1
+    },
+    {
+      "date": "20260226",
+      "symbol": "688025",
+      "emotion_score": 2.0,
+      "model_score": 0.6916546695247452,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002099",
+      "emotion_score": 2.0,
+      "model_score": 0.7086381259373682,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600478",
+      "emotion_score": 2.0,
+      "model_score": 0.7048421874263615,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002970",
+      "emotion_score": 2.0,
+      "model_score": 0.7097358105424177,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600540",
+      "emotion_score": 2.0,
+      "model_score": 0.7071975878574287,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "001339",
+      "emotion_score": 2.0,
+      "model_score": 0.6945309383479602,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002491",
+      "emotion_score": 2.0,
+      "model_score": 0.6900745183192145,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "001389",
+      "emotion_score": 2.0,
+      "model_score": 0.6968138145292422,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002350",
+      "emotion_score": 2.0,
+      "model_score": 0.6992846633703261,
+      "success": 1
+    },
+    {
+      "date": "20260226",
+      "symbol": "600522",
+      "emotion_score": 2.0,
+      "model_score": 0.669234582400037,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "603912",
+      "emotion_score": 2.0,
+      "model_score": 0.6718086771043802,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600744",
+      "emotion_score": 2.0,
+      "model_score": 0.6758305388265625,
+      "success": 1
+    },
+    {
+      "date": "20260226",
+      "symbol": "600487",
+      "emotion_score": 2.0,
+      "model_score": 0.609994703348741,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002162",
+      "emotion_score": 2.0,
+      "model_score": 0.6723163536027749,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "300303",
+      "emotion_score": 2.0,
+      "model_score": 0.6215499749336404,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002008",
+      "emotion_score": 2.0,
+      "model_score": 0.6474008191118678,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002272",
+      "emotion_score": 2.0,
+      "model_score": 0.6408254350524085,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002283",
+      "emotion_score": 2.0,
+      "model_score": 0.6644160739707059,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "688786",
+      "emotion_score": 2.0,
+      "model_score": 0.552674186940146,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "300499",
+      "emotion_score": 2.0,
+      "model_score": 0.4720252544856424,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002463",
+      "emotion_score": 2.0,
+      "model_score": 0.4766433124200114,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "603267",
+      "emotion_score": 2.0,
+      "model_score": 0.5566537481573804,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002916",
+      "emotion_score": 2.0,
+      "model_score": 0.38930103097066227,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600410",
+      "emotion_score": 2.0,
+      "model_score": 0.511038482631124,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002095",
+      "emotion_score": 2.0,
+      "model_score": 0.5496414177505241,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600343",
+      "emotion_score": 2.0,
+      "model_score": 0.5200513092382067,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "603530",
+      "emotion_score": 2.0,
+      "model_score": 0.5482800641004119,
+      "success": 1
+    },
+    {
+      "date": "20260226",
+      "symbol": "603950",
+      "emotion_score": 2.0,
+      "model_score": 0.5456431955889073,
+      "success": 1
+    },
+    {
+      "date": "20260226",
+      "symbol": "002478",
+      "emotion_score": 2.0,
+      "model_score": 0.5095042853406058,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600979",
+      "emotion_score": 2.0,
+      "model_score": 0.5157320075099241,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "603308",
+      "emotion_score": 2.0,
+      "model_score": 0.33877321321265824,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002913",
+      "emotion_score": 2.0,
+      "model_score": 0.5398245504989305,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600875",
+      "emotion_score": 2.0,
+      "model_score": 0.45655133925719493,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002546",
+      "emotion_score": 2.0,
+      "model_score": 0.513821796901786,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "300943",
+      "emotion_score": 2.0,
+      "model_score": 0.4878339808032477,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "000534",
+      "emotion_score": 2.0,
+      "model_score": 0.4513438201247678,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "001400",
+      "emotion_score": 2.0,
+      "model_score": 0.4330477057027944,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "603958",
+      "emotion_score": 2.0,
+      "model_score": 0.45760475816152896,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600399",
+      "emotion_score": 2.0,
+      "model_score": 0.41444844477986276,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "301630",
+      "emotion_score": 2.0,
+      "model_score": 0.34255762841942866,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "002286",
+      "emotion_score": 2.0,
+      "model_score": 0.4407753622942728,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "603163",
+      "emotion_score": 2.0,
+      "model_score": 0.44279305915394224,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600237",
+      "emotion_score": 2.0,
+      "model_score": 0.3891661124603877,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "688530",
+      "emotion_score": 2.0,
+      "model_score": 0.3532196428362776,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "603315",
+      "emotion_score": 2.0,
+      "model_score": 0.4147888063635324,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "600841",
+      "emotion_score": 2.0,
+      "model_score": 0.39882298962675505,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "603867",
+      "emotion_score": 2.0,
+      "model_score": 0.37295187964169685,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "301175",
+      "emotion_score": 2.0,
+      "model_score": 0.3344411879588695,
+      "success": 0
+    },
+    {
+      "date": "20260226",
+      "symbol": "000010",
+      "emotion_score": 2.0,
+      "model_score": 0.38728652439183237,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603232",
+      "emotion_score": 2.5,
+      "model_score": 0.7123087184199098,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "000035",
+      "emotion_score": 2.5,
+      "model_score": 0.7039147483140524,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002842",
+      "emotion_score": 2.5,
+      "model_score": 0.6520455871290722,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002177",
+      "emotion_score": 2.5,
+      "model_score": 0.6328198654336659,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "605398",
+      "emotion_score": 2.5,
+      "model_score": 0.7100762425005414,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "002261",
+      "emotion_score": 2.5,
+      "model_score": 0.6890908040695497,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "002865",
+      "emotion_score": 2.5,
+      "model_score": 0.6712664120890757,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "688118",
+      "emotion_score": 2.5,
+      "model_score": 0.7029300133911991,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "002216",
+      "emotion_score": 2.5,
+      "model_score": 0.706102119465824,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "300830",
+      "emotion_score": 2.5,
+      "model_score": 0.6714525456692026,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600725",
+      "emotion_score": 2.5,
+      "model_score": 0.7074549091713719,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "002182",
+      "emotion_score": 2.5,
+      "model_score": 0.6991904491630404,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "002980",
+      "emotion_score": 2.5,
+      "model_score": 0.6954961808106453,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "600126",
+      "emotion_score": 2.5,
+      "model_score": 0.6783775338716906,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600456",
+      "emotion_score": 2.5,
+      "model_score": 0.6597471944392527,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "002633",
+      "emotion_score": 2.5,
+      "model_score": 0.6922368341422775,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603381",
+      "emotion_score": 2.5,
+      "model_score": 0.6839088031670773,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600108",
+      "emotion_score": 2.5,
+      "model_score": 0.6663793675871588,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002167",
+      "emotion_score": 2.5,
+      "model_score": 0.6654976030462901,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600397",
+      "emotion_score": 2.5,
+      "model_score": 0.6387717924914187,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603353",
+      "emotion_score": 2.5,
+      "model_score": 0.6766260851109944,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002394",
+      "emotion_score": 2.5,
+      "model_score": 0.6715256236246477,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600498",
+      "emotion_score": 2.5,
+      "model_score": 0.5919090387659489,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "603093",
+      "emotion_score": 2.5,
+      "model_score": 0.5670665024180787,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "003018",
+      "emotion_score": 2.5,
+      "model_score": 0.5288439433640671,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600821",
+      "emotion_score": 2.5,
+      "model_score": 0.5033587466887648,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603618",
+      "emotion_score": 2.5,
+      "model_score": 0.4846342541311509,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600259",
+      "emotion_score": 2.5,
+      "model_score": 0.45525126871744676,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "603629",
+      "emotion_score": 2.5,
+      "model_score": 0.47591874904395426,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "688343",
+      "emotion_score": 2.5,
+      "model_score": 0.3901056818908985,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "000628",
+      "emotion_score": 2.5,
+      "model_score": 0.5291485581923804,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "002655",
+      "emotion_score": 2.5,
+      "model_score": 0.5188026711964708,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "000510",
+      "emotion_score": 2.5,
+      "model_score": 0.5042924857665214,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002356",
+      "emotion_score": 2.5,
+      "model_score": 0.5264258991345384,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002628",
+      "emotion_score": 2.5,
+      "model_score": 0.5266240918049796,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "002015",
+      "emotion_score": 2.5,
+      "model_score": 0.5254382278383225,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603117",
+      "emotion_score": 2.5,
+      "model_score": 0.5367580593790748,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603226",
+      "emotion_score": 2.5,
+      "model_score": 0.4689179064875574,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "688028",
+      "emotion_score": 2.5,
+      "model_score": 0.33625026724810103,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "300317",
+      "emotion_score": 2.5,
+      "model_score": 0.4063183424491144,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "003035",
+      "emotion_score": 2.5,
+      "model_score": 0.45009761701738943,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600452",
+      "emotion_score": 2.5,
+      "model_score": 0.38618273536230907,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002973",
+      "emotion_score": 2.5,
+      "model_score": 0.46315443568673736,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "000993",
+      "emotion_score": 2.5,
+      "model_score": 0.44869116383313545,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "000731",
+      "emotion_score": 2.5,
+      "model_score": 0.41442367889228465,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600549",
+      "emotion_score": 2.5,
+      "model_score": 0.40586684467579165,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600459",
+      "emotion_score": 2.5,
+      "model_score": 0.4227921078183631,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "000593",
+      "emotion_score": 2.5,
+      "model_score": 0.4333449938715619,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "002734",
+      "emotion_score": 2.5,
+      "model_score": 0.3972225955570147,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603318",
+      "emotion_score": 2.5,
+      "model_score": 0.4005441274751313,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "000657",
+      "emotion_score": 2.5,
+      "model_score": 0.40591738178597087,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "601958",
+      "emotion_score": 2.5,
+      "model_score": 0.38643436122121066,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603738",
+      "emotion_score": 2.5,
+      "model_score": 0.37609812180677693,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "000960",
+      "emotion_score": 2.5,
+      "model_score": 0.3903486269895506,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002756",
+      "emotion_score": 2.5,
+      "model_score": 0.39956491550589657,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603897",
+      "emotion_score": 2.5,
+      "model_score": 0.38570393860521474,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002155",
+      "emotion_score": 2.5,
+      "model_score": 0.38053648803730317,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "002046",
+      "emotion_score": 2.5,
+      "model_score": 0.4101030935981531,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603257",
+      "emotion_score": 2.5,
+      "model_score": 0.36602663601633284,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "603217",
+      "emotion_score": 2.5,
+      "model_score": 0.4157913375703323,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "603578",
+      "emotion_score": 2.5,
+      "model_score": 0.41020271398237573,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600230",
+      "emotion_score": 2.5,
+      "model_score": 0.3918514143487151,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "600301",
+      "emotion_score": 2.5,
+      "model_score": 0.3962349038609096,
+      "success": 1
+    },
+    {
+      "date": "20260227",
+      "symbol": "301226",
+      "emotion_score": 2.5,
+      "model_score": 0.36803492997938314,
+      "success": 0
+    },
+    {
+      "date": "20260227",
+      "symbol": "001216",
+      "emotion_score": 2.5,
+      "model_score": 0.3735823534115508,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "301302",
+      "emotion_score": 2.5,
+      "model_score": 0.7118821571764484,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "002207",
+      "emotion_score": 2.5,
+      "model_score": 0.7161402729374262,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "002490",
+      "emotion_score": 2.5,
+      "model_score": 0.7029129660714349,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "000554",
+      "emotion_score": 2.5,
+      "model_score": 0.696848361245463,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "002109",
+      "emotion_score": 2.5,
+      "model_score": 0.7037901909744948,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "300164",
+      "emotion_score": 2.5,
+      "model_score": 0.6603942736476222,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "601975",
+      "emotion_score": 2.5,
+      "model_score": 0.6801179943840251,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600722",
+      "emotion_score": 2.5,
+      "model_score": 0.7148485782257121,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600759",
+      "emotion_score": 2.5,
+      "model_score": 0.7094748842130723,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600871",
+      "emotion_score": 2.5,
+      "model_score": 0.6773344689088456,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "603619",
+      "emotion_score": 2.5,
+      "model_score": 0.6905048038486945,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600339",
+      "emotion_score": 2.5,
+      "model_score": 0.6881589350681205,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600714",
+      "emotion_score": 2.5,
+      "model_score": 0.7186103157948566,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600367",
+      "emotion_score": 2.5,
+      "model_score": 0.6892583908888017,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "601808",
+      "emotion_score": 2.5,
+      "model_score": 0.6545882734723316,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600026",
+      "emotion_score": 2.5,
+      "model_score": 0.6691076067690409,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "603488",
+      "emotion_score": 2.5,
+      "model_score": 0.7181550422070683,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "002828",
+      "emotion_score": 2.5,
+      "model_score": 0.6812209135750855,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "000070",
+      "emotion_score": 2.5,
+      "model_score": 0.6944990072061956,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "002413",
+      "emotion_score": 2.5,
+      "model_score": 0.6816189372990947,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "002536",
+      "emotion_score": 2.5,
+      "model_score": 0.6662369401141792,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "301213",
+      "emotion_score": 2.5,
+      "model_score": 0.6858778351567756,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "000890",
+      "emotion_score": 2.5,
+      "model_score": 0.6200024434054784,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "002389",
+      "emotion_score": 2.5,
+      "model_score": 0.6713857139744979,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "301338",
+      "emotion_score": 2.5,
+      "model_score": 0.6625785558220634,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "600227",
+      "emotion_score": 2.5,
+      "model_score": 0.683886101410365,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "000912",
+      "emotion_score": 2.5,
+      "model_score": 0.6986550658468271,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "002667",
+      "emotion_score": 2.5,
+      "model_score": 0.6914124366817667,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "001267",
+      "emotion_score": 2.5,
+      "model_score": 0.6542339925441294,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "003009",
+      "emotion_score": 2.5,
+      "model_score": 0.6705287058466509,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "002380",
+      "emotion_score": 2.5,
+      "model_score": 0.6812370012981843,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "001400",
+      "emotion_score": 2.5,
+      "model_score": 0.6642161290330304,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "002040",
+      "emotion_score": 2.5,
+      "model_score": 0.647526098990549,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "000968",
+      "emotion_score": 2.5,
+      "model_score": 0.6681855555922843,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600236",
+      "emotion_score": 2.5,
+      "model_score": 0.6412657286889951,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "300191",
+      "emotion_score": 2.5,
+      "model_score": 0.5384738824948885,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "000637",
+      "emotion_score": 2.5,
+      "model_score": 0.5496663127164874,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "600968",
+      "emotion_score": 2.5,
+      "model_score": 0.539896438670925,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "002554",
+      "emotion_score": 2.5,
+      "model_score": 0.5241310341067562,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "920088",
+      "emotion_score": 2.5,
+      "model_score": 0.46337364731182923,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600583",
+      "emotion_score": 2.5,
+      "model_score": 0.5147312302842417,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "603727",
+      "emotion_score": 2.5,
+      "model_score": 0.5362754917830335,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "301158",
+      "emotion_score": 2.5,
+      "model_score": 0.5071596698058792,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600989",
+      "emotion_score": 2.5,
+      "model_score": 0.3405155519098657,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "600938",
+      "emotion_score": 2.5,
+      "model_score": 0.4881217434876822,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "002629",
+      "emotion_score": 2.5,
+      "model_score": 0.49413405553025525,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "603115",
+      "emotion_score": 2.5,
+      "model_score": 0.4605258229043067,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "600688",
+      "emotion_score": 2.5,
+      "model_score": 0.4559052226220708,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "300157",
+      "emotion_score": 2.5,
+      "model_score": 0.38590911756820906,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "000096",
+      "emotion_score": 2.5,
+      "model_score": 0.4503098159290717,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "603011",
+      "emotion_score": 2.5,
+      "model_score": 0.4259134568539866,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "603083",
+      "emotion_score": 2.5,
+      "model_score": 0.39133762135978023,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "603861",
+      "emotion_score": 2.5,
+      "model_score": 0.43910600522854565,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "601857",
+      "emotion_score": 2.5,
+      "model_score": 0.007533051935476882,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "600256",
+      "emotion_score": 2.5,
+      "model_score": 0.4094534702713142,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "002432",
+      "emotion_score": 2.5,
+      "model_score": 0.41314614455386534,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "601069",
+      "emotion_score": 2.5,
+      "model_score": 0.4138310339508104,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "002545",
+      "emotion_score": 2.5,
+      "model_score": 0.4191737872033346,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "001337",
+      "emotion_score": 2.5,
+      "model_score": 0.39818136607957294,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "300139",
+      "emotion_score": 2.5,
+      "model_score": 0.3296347232587088,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "603393",
+      "emotion_score": 2.5,
+      "model_score": 0.32839797407364396,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "601872",
+      "emotion_score": 2.5,
+      "model_score": 0.3487629884999863,
+      "success": 1
+    },
+    {
+      "date": "20260302",
+      "symbol": "605117",
+      "emotion_score": 2.5,
+      "model_score": 0.3299572860723428,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "000506",
+      "emotion_score": 2.5,
+      "model_score": 0.37929983262151024,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "688307",
+      "emotion_score": 2.5,
+      "model_score": 0.3856884744489301,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "600988",
+      "emotion_score": 2.5,
+      "model_score": 0.35375654150916486,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "600435",
+      "emotion_score": 2.5,
+      "model_score": 0.3766327566922743,
+      "success": 0
+    },
+    {
+      "date": "20260302",
+      "symbol": "300084",
+      "emotion_score": 2.5,
+      "model_score": 0.3197496120801129,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "000407",
+      "emotion_score": 1.0,
+      "model_score": 0.715047130489915,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "002957",
+      "emotion_score": 1.0,
+      "model_score": 0.6672301034927649,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "002506",
+      "emotion_score": 1.0,
+      "model_score": 0.671449128013266,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "001269",
+      "emotion_score": 1.0,
+      "model_score": 0.7109851255327079,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "600617",
+      "emotion_score": 1.0,
+      "model_score": 0.7027649200499925,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "605169",
+      "emotion_score": 1.0,
+      "model_score": 0.7084383705471807,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "603778",
+      "emotion_score": 1.0,
+      "model_score": 0.5736760062296726,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "603616",
+      "emotion_score": 1.0,
+      "model_score": 0.7024925223229309,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "600681",
+      "emotion_score": 1.0,
+      "model_score": 0.6996688138966388,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "002491",
+      "emotion_score": 1.0,
+      "model_score": 0.5181855530578229,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "002952",
+      "emotion_score": 1.0,
+      "model_score": 0.6963353557404657,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "001299",
+      "emotion_score": 1.0,
+      "model_score": 0.6956153272549469,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "600798",
+      "emotion_score": 1.0,
+      "model_score": 0.6803206168162093,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "600635",
+      "emotion_score": 1.0,
+      "model_score": 0.6574268788258895,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "600903",
+      "emotion_score": 1.0,
+      "model_score": 0.6195690517631962,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "002682",
+      "emotion_score": 1.0,
+      "model_score": 0.6462761225165692,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "600333",
+      "emotion_score": 1.0,
+      "model_score": 0.6464994590963126,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "002911",
+      "emotion_score": 1.0,
+      "model_score": 0.6277277734328803,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "300332",
+      "emotion_score": 1.0,
+      "model_score": 0.635744866848625,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "002350",
+      "emotion_score": 1.0,
+      "model_score": 0.5213336321913379,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "603139",
+      "emotion_score": 1.0,
+      "model_score": 0.5397385790550717,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "300483",
+      "emotion_score": 1.0,
+      "model_score": 0.4177704513811406,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "920010",
+      "emotion_score": 1.0,
+      "model_score": 0.4909805879363899,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "601022",
+      "emotion_score": 1.0,
+      "model_score": 0.5231091953168939,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "002267",
+      "emotion_score": 1.0,
+      "model_score": 0.45337842831435976,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "600028",
+      "emotion_score": 1.0,
+      "model_score": 0.11926340979128662,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "603689",
+      "emotion_score": 1.0,
+      "model_score": 0.321764213240375,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "600917",
+      "emotion_score": 1.0,
+      "model_score": 0.35132515288997973,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "920014",
+      "emotion_score": 1.0,
+      "model_score": 0.3688100854452577,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "601015",
+      "emotion_score": 1.0,
+      "model_score": 0.4471361144383542,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "603053",
+      "emotion_score": 1.0,
+      "model_score": 0.42610049374572856,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "605368",
+      "emotion_score": 1.0,
+      "model_score": 0.3655392985990146,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "601139",
+      "emotion_score": 1.0,
+      "model_score": 0.3876730765113521,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "601866",
+      "emotion_score": 1.0,
+      "model_score": 0.41419706811193685,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "000421",
+      "emotion_score": 1.0,
+      "model_score": 0.44255876308710995,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "601083",
+      "emotion_score": 1.0,
+      "model_score": 0.37395626979152313,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "603080",
+      "emotion_score": 1.0,
+      "model_score": 0.41326920126500183,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "603706",
+      "emotion_score": 1.0,
+      "model_score": 0.4495784153723942,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "002700",
+      "emotion_score": 1.0,
+      "model_score": 0.38115155777215476,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "600403",
+      "emotion_score": 1.0,
+      "model_score": 0.42909665402491737,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "000301",
+      "emotion_score": 1.0,
+      "model_score": 0.39369152564074206,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "920158",
+      "emotion_score": 1.0,
+      "model_score": 0.18594701682588488,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "920571",
+      "emotion_score": 1.0,
+      "model_score": 0.30869706049148227,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "300839",
+      "emotion_score": 1.0,
+      "model_score": 0.3555265708236773,
+      "success": 0
+    },
+    {
+      "date": "20260303",
+      "symbol": "920260",
+      "emotion_score": 1.0,
+      "model_score": 0.334401835119923,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "688525",
+      "emotion_score": 1.0,
+      "model_score": 0.6755074752864719,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "000533",
+      "emotion_score": 1.0,
+      "model_score": 0.6844015347720765,
+      "success": 1
+    },
+    {
+      "date": "20260304",
+      "symbol": "002272",
+      "emotion_score": 1.0,
+      "model_score": 0.6090114533556517,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "600545",
+      "emotion_score": 1.0,
+      "model_score": 0.6636858455752664,
+      "success": 1
+    },
+    {
+      "date": "20260304",
+      "symbol": "001309",
+      "emotion_score": 1.0,
+      "model_score": 0.5473362372982704,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "002339",
+      "emotion_score": 1.0,
+      "model_score": 0.7015895717470005,
+      "success": 1
+    },
+    {
+      "date": "20260304",
+      "symbol": "002498",
+      "emotion_score": 1.0,
+      "model_score": 0.6613356942603044,
+      "success": 1
+    },
+    {
+      "date": "20260304",
+      "symbol": "600821",
+      "emotion_score": 1.0,
+      "model_score": 0.6576450532837327,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "300617",
+      "emotion_score": 1.0,
+      "model_score": 0.611865925612167,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "300265",
+      "emotion_score": 1.0,
+      "model_score": 0.6685842254928284,
+      "success": 1
+    },
+    {
+      "date": "20260304",
+      "symbol": "600313",
+      "emotion_score": 1.0,
+      "model_score": 0.6365294165533931,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "605268",
+      "emotion_score": 1.0,
+      "model_score": 0.700648166469042,
+      "success": 1
+    },
+    {
+      "date": "20260304",
+      "symbol": "603530",
+      "emotion_score": 1.0,
+      "model_score": 0.6785851203809945,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "605196",
+      "emotion_score": 1.0,
+      "model_score": 0.6511637062813473,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "301373",
+      "emotion_score": 1.0,
+      "model_score": 0.6340192420237208,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "601096",
+      "emotion_score": 1.0,
+      "model_score": 0.6654347226407145,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "603175",
+      "emotion_score": 1.0,
+      "model_score": 0.6650435314326395,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "000010",
+      "emotion_score": 1.0,
+      "model_score": 0.6180434484674061,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "002167",
+      "emotion_score": 1.0,
+      "model_score": 0.6645189655521582,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "001396",
+      "emotion_score": 1.0,
+      "model_score": 0.6676404139144547,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "000890",
+      "emotion_score": 1.0,
+      "model_score": 0.5999448251788934,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "002162",
+      "emotion_score": 1.0,
+      "model_score": 0.6649863278216407,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "002389",
+      "emotion_score": 1.0,
+      "model_score": 0.6400775389963609,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "002357",
+      "emotion_score": 1.0,
+      "model_score": 0.5475264216155393,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "000525",
+      "emotion_score": 1.0,
+      "model_score": 0.444041965990236,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "002877",
+      "emotion_score": 1.0,
+      "model_score": 0.4237229820883675,
+      "success": 1
+    },
+    {
+      "date": "20260304",
+      "symbol": "001282",
+      "emotion_score": 1.0,
+      "model_score": 0.41571869543671286,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "301129",
+      "emotion_score": 1.0,
+      "model_score": 0.4417640018798887,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "002885",
+      "emotion_score": 1.0,
+      "model_score": 0.427926267011907,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "002178",
+      "emotion_score": 1.0,
+      "model_score": 0.43272598401501283,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "688176",
+      "emotion_score": 1.0,
+      "model_score": 0.420377165788109,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "000862",
+      "emotion_score": 1.0,
+      "model_score": 0.4249555203558677,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "603316",
+      "emotion_score": 1.0,
+      "model_score": 0.43672264994664006,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "603618",
+      "emotion_score": 1.0,
+      "model_score": 0.4113456812107855,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "300880",
+      "emotion_score": 1.0,
+      "model_score": 0.4090831742051552,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "600236",
+      "emotion_score": 1.0,
+      "model_score": 0.3753111556907832,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "603045",
+      "emotion_score": 1.0,
+      "model_score": 0.38841380541164194,
+      "success": 0
+    },
+    {
+      "date": "20260304",
+      "symbol": "600149",
+      "emotion_score": 1.0,
+      "model_score": 0.3570752854640961,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "300323",
+      "emotion_score": 1.5,
+      "model_score": 0.7076181629203497,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002429",
+      "emotion_score": 1.5,
+      "model_score": 0.7027044071687768,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002449",
+      "emotion_score": 1.5,
+      "model_score": 0.7134395342613101,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600703",
+      "emotion_score": 1.5,
+      "model_score": 0.6836200121157668,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002235",
+      "emotion_score": 1.5,
+      "model_score": 0.7055922254263982,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "000727",
+      "emotion_score": 1.5,
+      "model_score": 0.7066985404186393,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "603688",
+      "emotion_score": 1.5,
+      "model_score": 0.6967959999151814,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002983",
+      "emotion_score": 1.5,
+      "model_score": 0.7112065857673431,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002355",
+      "emotion_score": 1.5,
+      "model_score": 0.7094092129663812,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002587",
+      "emotion_score": 1.5,
+      "model_score": 0.6959064629023594,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "300162",
+      "emotion_score": 1.5,
+      "model_score": 0.6854939120153409,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600666",
+      "emotion_score": 1.5,
+      "model_score": 0.6946382505638182,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600875",
+      "emotion_score": 1.5,
+      "model_score": 0.6656393762720336,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "603773",
+      "emotion_score": 1.5,
+      "model_score": 0.7068366485362254,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "300269",
+      "emotion_score": 1.5,
+      "model_score": 0.6843924187286703,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "920001",
+      "emotion_score": 1.5,
+      "model_score": 0.6906810457800258,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002845",
+      "emotion_score": 1.5,
+      "model_score": 0.7045293047104296,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "003036",
+      "emotion_score": 1.5,
+      "model_score": 0.7104505339216547,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "000509",
+      "emotion_score": 1.5,
+      "model_score": 0.6909558278216941,
+      "success": 1
+    },
+    {
+      "date": "20260305",
+      "symbol": "300241",
+      "emotion_score": 1.5,
+      "model_score": 0.6537506990192106,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600800",
+      "emotion_score": 1.5,
+      "model_score": 0.6721856338321389,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "300303",
+      "emotion_score": 1.5,
+      "model_score": 0.6710883891448252,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "688055",
+      "emotion_score": 1.5,
+      "model_score": 0.6745716453757092,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "000536",
+      "emotion_score": 1.5,
+      "model_score": 0.7020583953532724,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "000045",
+      "emotion_score": 1.5,
+      "model_score": 0.7046535134708263,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002952",
+      "emotion_score": 1.5,
+      "model_score": 0.6723637795101925,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "300389",
+      "emotion_score": 1.5,
+      "model_score": 0.6910940036026594,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "601727",
+      "emotion_score": 1.5,
+      "model_score": 0.6549960446963567,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002857",
+      "emotion_score": 1.5,
+      "model_score": 0.6825248238620222,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "605098",
+      "emotion_score": 1.5,
+      "model_score": 0.6986586648599004,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "000555",
+      "emotion_score": 1.5,
+      "model_score": 0.6899462800215093,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002796",
+      "emotion_score": 1.5,
+      "model_score": 0.6735162459019924,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002456",
+      "emotion_score": 1.5,
+      "model_score": 0.674811707389828,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002800",
+      "emotion_score": 1.5,
+      "model_score": 0.6909542248051103,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "300708",
+      "emotion_score": 1.5,
+      "model_score": 0.5238476243594761,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "601179",
+      "emotion_score": 1.5,
+      "model_score": 0.6520703593347513,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "688079",
+      "emotion_score": 1.5,
+      "model_score": 0.6802110750443305,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "000920",
+      "emotion_score": 1.5,
+      "model_score": 0.6806359056149414,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600744",
+      "emotion_score": 1.5,
+      "model_score": 0.6407353976736753,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600468",
+      "emotion_score": 1.5,
+      "model_score": 0.5474542962869248,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600828",
+      "emotion_score": 1.5,
+      "model_score": 0.5652829363931061,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002195",
+      "emotion_score": 1.5,
+      "model_score": 0.4836304685228802,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002520",
+      "emotion_score": 1.5,
+      "model_score": 0.5500218967139285,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002471",
+      "emotion_score": 1.5,
+      "model_score": 0.5106906174863248,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600516",
+      "emotion_score": 1.5,
+      "model_score": 0.4616390505520485,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002559",
+      "emotion_score": 1.5,
+      "model_score": 0.5357434842400123,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600844",
+      "emotion_score": 1.5,
+      "model_score": 0.5289131709116746,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "603058",
+      "emotion_score": 1.5,
+      "model_score": 0.5389370587002326,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002733",
+      "emotion_score": 1.5,
+      "model_score": 0.45441727841980967,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002986",
+      "emotion_score": 1.5,
+      "model_score": 0.4498947637878756,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "002913",
+      "emotion_score": 1.5,
+      "model_score": 0.4591694289976577,
+      "success": 1
+    },
+    {
+      "date": "20260305",
+      "symbol": "001267",
+      "emotion_score": 1.5,
+      "model_score": 0.41542212336323914,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "605298",
+      "emotion_score": 1.5,
+      "model_score": 0.46143929420465063,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "600590",
+      "emotion_score": 1.5,
+      "model_score": 0.4457368197570702,
+      "success": 1
+    },
+    {
+      "date": "20260305",
+      "symbol": "000815",
+      "emotion_score": 1.5,
+      "model_score": 0.35979898145405265,
+      "success": 1
+    },
+    {
+      "date": "20260305",
+      "symbol": "300895",
+      "emotion_score": 1.5,
+      "model_score": 0.40051585980669263,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "603337",
+      "emotion_score": 1.5,
+      "model_score": 0.4439433899022661,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "603067",
+      "emotion_score": 1.5,
+      "model_score": 0.4076550261249714,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "300072",
+      "emotion_score": 1.5,
+      "model_score": 0.38194340904665497,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "603001",
+      "emotion_score": 1.5,
+      "model_score": 0.4296905187680131,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "000703",
+      "emotion_score": 1.5,
+      "model_score": 0.3623891535182384,
+      "success": 0
+    },
+    {
+      "date": "20260305",
+      "symbol": "688031",
+      "emotion_score": 1.5,
+      "model_score": 0.3504876150547557,
+      "success": 0
+    }
+  ],
+  "heatmap_cells": [
+    {
+      "emotion_score": 1.0,
+      "score_bin": "0.0-0.5",
+      "sample_count": 113,
+      "success_count": 6,
+      "success_rate": 0.0531
+    },
+    {
+      "emotion_score": 1.0,
+      "score_bin": "0.5-0.6",
+      "sample_count": 54,
+      "success_count": 5,
+      "success_rate": 0.0926
+    },
+    {
+      "emotion_score": 1.0,
+      "score_bin": "0.6-0.7",
+      "sample_count": 136,
+      "success_count": 13,
+      "success_rate": 0.0956
+    },
+    {
+      "emotion_score": 1.0,
+      "score_bin": "0.7-0.8",
+      "sample_count": 32,
+      "success_count": 6,
+      "success_rate": 0.1875
+    },
+    {
+      "emotion_score": 1.5,
+      "score_bin": "0.0-0.5",
+      "sample_count": 16,
+      "success_count": 3,
+      "success_rate": 0.1875
+    },
+    {
+      "emotion_score": 1.5,
+      "score_bin": "0.5-0.6",
+      "sample_count": 8,
+      "success_count": 0,
+      "success_rate": 0.0
+    },
+    {
+      "emotion_score": 1.5,
+      "score_bin": "0.6-0.7",
+      "sample_count": 26,
+      "success_count": 1,
+      "success_rate": 0.0385
+    },
+    {
+      "emotion_score": 1.5,
+      "score_bin": "0.7-0.8",
+      "sample_count": 12,
+      "success_count": 0,
+      "success_rate": 0.0
+    },
+    {
+      "emotion_score": 2.0,
+      "score_bin": "0.0-0.5",
+      "sample_count": 51,
+      "success_count": 3,
+      "success_rate": 0.0588
+    },
+    {
+      "emotion_score": 2.0,
+      "score_bin": "0.5-0.6",
+      "sample_count": 32,
+      "success_count": 5,
+      "success_rate": 0.1562
+    },
+    {
+      "emotion_score": 2.0,
+      "score_bin": "0.6-0.7",
+      "sample_count": 75,
+      "success_count": 11,
+      "success_rate": 0.1467
+    },
+    {
+      "emotion_score": 2.0,
+      "score_bin": "0.7-0.8",
+      "sample_count": 10,
+      "success_count": 0,
+      "success_rate": 0.0
+    },
+    {
+      "emotion_score": 2.5,
+      "score_bin": "0.0-0.5",
+      "sample_count": 75,
+      "success_count": 21,
+      "success_rate": 0.28
+    },
+    {
+      "emotion_score": 2.5,
+      "score_bin": "0.5-0.6",
+      "sample_count": 26,
+      "success_count": 10,
+      "success_rate": 0.3846
+    },
+    {
+      "emotion_score": 2.5,
+      "score_bin": "0.6-0.7",
+      "sample_count": 74,
+      "success_count": 24,
+      "success_rate": 0.3243
+    },
+    {
+      "emotion_score": 2.5,
+      "score_bin": "0.7-0.8",
+      "sample_count": 27,
+      "success_count": 16,
+      "success_rate": 0.5926
+    },
+    {
+      "emotion_score": 4.0,
+      "score_bin": "0.0-0.5",
+      "sample_count": 10,
+      "success_count": 0,
+      "success_rate": 0.0
+    },
+    {
+      "emotion_score": 4.0,
+      "score_bin": "0.5-0.6",
+      "sample_count": 6,
+      "success_count": 1,
+      "success_rate": 0.1667
+    },
+    {
+      "emotion_score": 4.0,
+      "score_bin": "0.6-0.7",
+      "sample_count": 20,
+      "success_count": 9,
+      "success_rate": 0.45
+    },
+    {
+      "emotion_score": 4.0,
+      "score_bin": "0.7-0.8",
+      "sample_count": 4,
+      "success_count": 2,
+      "success_rate": 0.5
+    }
+  ],
+  "emotion_scores": [
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    4.0
+  ],
+  "score_bins": [
+    "0.0-0.5",
+    "0.5-0.6",
+    "0.6-0.7",
+    "0.7-0.8",
+    "0.8-1.0"
+  ],
+  "image_path": "E:\\WSL\\github\\one_to_two_V2\\reports\\images\\heatmap_20260206_20260306.png",
+  "model_meta": {
+    "train_start": "20250905",
+    "train_end": "20260305",
+    "sample_size": 7434,
+    "base_success_rate": 0.22249125638956146,
+    "features": [
+      "circ_mv",
+      "turnover",
+      "amount",
+      "first_seal_minutes",
+      "is_early_seal",
+      "open_times",
+      "is_limit_up",
+      "success_rate",
+      "first_board_ratio",
+      "index_return"
+    ],
+    "model_type": "logistic_regression",
+    "version": "2026-03-08"
+  }
+}

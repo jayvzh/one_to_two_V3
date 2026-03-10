@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Query
 from typing import Optional
 
-from ..services import FileService
+from services import FileService
 
 router = APIRouter()
 file_service = FileService()

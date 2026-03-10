@@ -1,0 +1,24 @@
+{
+  "production_train": {
+    "months": 6,
+    "cache_check_months": 6
+  },
+  "daily": {
+    "cache_check_months": 2,
+    "model_filename": "model_latest.joblib"
+  },
+  "emotion_backtest": {
+    "months": 6,
+    "window_days": 64,
+    "cache_check_months": 3
+  },
+  "rolling": {
+    "train_months": 6,
+    "test_months": 1,
+    "sensitivity_train_months": [2, 3, 4, 6]
+  },
+  "heatmap": {
+    "months": 1,
+    "model_filename": "model_latest.joblib"
+  }
+}

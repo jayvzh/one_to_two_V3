@@ -15,106 +15,48 @@ extraResources:
   - from: python-api
     to: python-api
     filter:
-      - "**/*"
+      - "**/*.py"
       - "!**/__pycache__/**"
       - "!**/*.pyc"
       - "!**/.git/**"
   - from: one_to_two_V2
     to: one_to_two_V2
     filter:
-      - "**/*"
+      - "**/*.py"
       - "!**/__pycache__/**"
       - "!**/*.pyc"
       - "!**/.git/**"
       - "!**/cache/**"
       - "!**/models/**"
       - "!**/snapshots/**"
+      - "!**/venv/**"
+      - "!**/data/**"
+      - "!**/logs/**"
+      - "!**/reports/**"
+      - "**/config/**"
+      - "**/pipeline/templates/**"
 
 asarUnpack:
-  - "python-api/**/*"
-  - "one_to_two_V2/**/*"
+  - python-api/**/*
+  - one_to_two_V2/**/*
 
 win:
   target:
     - target: nsis
       arch:
         - x64
-    - target: portable
-      arch:
-        - x64
   icon: build/icon.ico
-  artifactName: ${productName}-${version}-${arch}-${os}.${ext}
+  artifactName: ${productName}-${version}-Setup-${arch}.exe
 
 nsis:
   oneClick: false
   allowToChangeInstallationDirectory: true
-  allowElevation: true
-  installerIcon: build/icon.ico
-  uninstallerIcon: build/icon.ico
-  installerHeaderIcon: build/icon.ico
   createDesktopShortcut: true
   createStartMenuShortcut: true
   shortcutName: ${productName}
-  include: build/installer.nsh
   deleteAppDataOnUninstall: false
   runAfterFinish: true
-  installerLanguages:
-    - zh_CN
-    - en_US
   language: "2052"
   perMachine: false
 
-mac:
-  target:
-    - target: dmg
-      arch:
-        - x64
-        - arm64
-    - target: zip
-      arch:
-        - x64
-        - arm64
-  icon: build/icon.icns
-  category: public.app-category.finance
-  hardenedRuntime: true
-  gatekeeperAssess: false
-  artifactName: ${productName}-${version}-${arch}-${os}.${ext}
-
-dmg:
-  contents:
-    - x: 130
-      y: 220
-    - x: 410
-      y: 220
-      type: link
-      path: /Applications
-
-linux:
-  target:
-    - target: AppImage
-      arch:
-        - x64
-    - target: deb
-      arch:
-        - x64
-  icon: build/icons
-  category: Office
-  maintainer: onetotwo@example.com
-  artifactName: ${productName}-${version}-${arch}-${os}.${ext}
-
-appImage:
-  systemIntegration: ask
-
-deb:
-  priority: optional
-  compression: xz
-
-portable:
-  artifactName: ${productName}-${version}-Portable.${ext}
-
-publish:
-  provider: generic
-  url: https://example.com/releases
-
-beforeBuild: scripts/before-build.js
-afterSign: scripts/after-sign.js
+compression: maximum
