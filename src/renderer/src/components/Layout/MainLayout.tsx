@@ -12,6 +12,7 @@ import {
   FolderOutlined,
 } from '@ant-design/icons'
 import { useNavigate, useLocation, Outlet } from 'react-router-dom'
+import BackendStatus from '../BackendStatus'
 import styles from './MainLayout.module.less'
 
 const { Header, Content, Sider } = Layout
@@ -103,6 +104,7 @@ const MainLayout: React.FC = () => {
             <h2 className={styles.title}>
               {menuItems.find((item) => item.key === location.pathname)?.label || 'OneToTwo V3'}
             </h2>
+            <BackendStatus />
           </div>
         </Header>
         <Content className={styles.content}>

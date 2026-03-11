@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useCallback, useRef, useEffect } from 'react'
 import type { TaskStatus, LogEntry } from '../services/types'
-import { pollTaskStatus, fetchTaskLogs } from '../services/api'
+import { pollTaskStatus, fetchTaskLogs, checkApiHealth } from '../services/api'
+import type { AppSettings } from '../electron.d.ts'
 
 interface TaskState {
   taskId: string | null
@@ -9,14 +10,25 @@ interface TaskState {
   isRunning: boolean
 }
 
+interface BackendStatus {
+  connected: boolean
+  lastChecked: Date | null
+  checking: boolean
+}
+
 interface AppState {
   currentTask: TaskState
+  backendStatus: BackendStatus
+  appSettings: AppSettings
   startTask: (taskId: string) => void
   updateTaskStatus: (status: TaskStatus) => void
   addLog: (log: LogEntry) => void
   setLogs: (logs: LogEntry[]) => void
   clearTask: () => void
   stopPolling: () => void
+  checkBackendHealth: () => Promise<void>
+  loadSettings: () => Promise<void>
+  updateSettings: (settings: Partial<AppSettings>) => Promise<void>
 }
 
 const AppContext = createContext<AppState | undefined>(undefined)
@@ -29,8 +41,20 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     isRunning: false,
   })
   
+  const [backendStatus, setBackendStatus] = useState<BackendStatus>({
+    connected: false,
+    lastChecked: null,
+    checking: false,
+  })
+
+  const [appSettings, setAppSettings] = useState<AppSettings>({
+    closeToTray: true,
+    firstCloseShown: false,
+  })
+  
   const pollingRef = useRef<boolean>(false)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const healthCheckIntervalRef = useRef<NodeJS.Timeout | null>(null)
 
   const startTask = useCallback((taskId: string) => {
     setCurrentTask({
@@ -86,23 +110,74 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }
   }, [])
 
+  const checkBackendHealth = useCallback(async () => {
+    setBackendStatus(prev => ({ ...prev, checking: true }))
+    try {
+      const healthy = await checkApiHealth()
+      setBackendStatus({
+        connected: healthy,
+        lastChecked: new Date(),
+        checking: false,
+      })
+    } catch {
+      setBackendStatus({
+        connected: false,
+        lastChecked: new Date(),
+        checking: false,
+      })
+    }
+  }, [])
+
+  const loadSettings = useCallback(async () => {
+    try {
+      const settings = await window.electronAPI.settings.get()
+      setAppSettings(settings)
+    } catch (error) {
+      console.error('Failed to load settings:', error)
+    }
+  }, [])
+
+  const updateSettings = useCallback(async (settings: Partial<AppSettings>) => {
+    try {
+      const newSettings = await window.electronAPI.settings.set(settings)
+      setAppSettings(newSettings)
+    } catch (error) {
+      console.error('Failed to update settings:', error)
+    }
+  }, [])
+
   useEffect(() => {
+    loadSettings()
+    checkBackendHealth()
+
+    healthCheckIntervalRef.current = setInterval(() => {
+      checkBackendHealth()
+    }, 30000)
+
     return () => {
       pollingRef.current = false
       if (intervalRef.current) {
         clearInterval(intervalRef.current)
       }
+      if (healthCheckIntervalRef.current) {
+        clearInterval(healthCheckIntervalRef.current)
+      }
     }
-  }, [])
+  }, [loadSettings, checkBackendHealth])
 
   const value: AppState = {
     currentTask,
+    backendStatus,
+    appSettings,
     startTask,
     updateTaskStatus,
     addLog,
     setLogs,
     clearTask,
     stopPolling,
+    checkBackendHealth,
+    loadSettings,
+    updateSettings,
   }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>

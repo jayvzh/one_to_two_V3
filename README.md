@@ -14,33 +14,28 @@
 | **后端 API** | FastAPI + Uvicorn |
 | **策略引擎** | Python 3.11+ (one_to_two_V2) |
 
-## 快速开始
-
-### 环境要求
+## 环境要求
 
 - **Node.js**: >= 18.0.0
 - **Python**: >= 3.11
 - **操作系统**: Windows 10/11, macOS 10.15+, Linux
 
-### 安装步骤
+## 快速开始
+
+### 安装
 
 ```bash
-# 1. 克隆项目
-git clone https://github.com/your-repo/one_to_two_V3.git
-cd one_to_two_V3
-
-# 2. 安装 Node.js 依赖
+# 安装 Node.js 依赖
 npm install
 
-# 3. 安装 Python 依赖
+# 安装 Python 依赖
 pip install -e ./one_to_two_V2
 pip install fastapi uvicorn pydantic
 ```
 
-### 启动开发模式
+### 开发模式
 
 ```bash
-# 启动 Electron 开发模式（自动启动 Python API）
 npm run dev
 ```
 
@@ -52,14 +47,14 @@ npm run dev
 
 | 模块 | 路径 | 功能说明 |
 |------|------|----------|
-| **模型训练** | `/train` | 训练一进二预测模型，支持自定义训练区间 |
-| **每日日报** | `/daily` | 生成每日一进二候选股票日报 |
-| **滚动评估** | `/rolling` | 滚动窗口验证模型稳定性，敏感性分析 |
-| **情绪回测** | `/backtest` | 情绪分层回测，验证情绪系统有效性 |
-| **热力图** | `/heatmap` | 情绪×模型分数交互验证，热力图分析 |
-| **缓存同步** | `/sync-cache` | 同步涨停池和指数缓存数据 |
-| **报告管理** | `/reports` | 查看和管理所有 HTML 报告 |
-| **定时任务** | `/scheduler` | 配置和管理定时任务 |
+| **模型训练** | `/train` | 训练一进二预测模型 |
+| **每日日报** | `/daily` | 生成每日候选股票日报 |
+| **滚动评估** | `/rolling` | 滚动窗口验证模型稳定性 |
+| **情绪回测** | `/backtest` | 情绪分层回测分析 |
+| **热力图** | `/heatmap` | 情绪×模型分数热力图 |
+| **缓存同步** | `/sync-cache` | 同步涨停池和指数数据 |
+| **报告管理** | `/reports` | 查看 HTML 报告 |
+| **定时任务** | `/scheduler` | 配置定时任务 |
 | **系统设置** | `/settings` | 配置参数管理 |
 
 ## 项目结构
@@ -91,94 +86,51 @@ one_to_two_V3/
 
 ## 打包发布
 
-### Windows
+### 打包前准备
 
 ```bash
-# 打包 Windows 安装包 (NSIS)
+# 激活目标 Python 环境
+conda activate <env-name>
+
+# 确保 pyinstaller 已安装
+pip install pyinstaller
+```
+
+### Windows 打包
+
+```bash
+# 完整打包（包含 Python API）
 npm run build:win
 
-# 打包 Windows 便携版
-npm run build:unpack
+# 快速打包（不打包 Python API，用于测试）
+npm run build:win:quick
 ```
 
 输出文件：
-- `release/OneToTwo-{version}-x64-win.exe` - 安装包
-- `release/OneToTwo-{version}-Portable.exe` - 便携版
+- `release/OneToTwo-{version}-Setup-x64.exe` - 安装包
 
-### macOS
+### macOS / Linux
 
 ```bash
 npm run build:mac
-```
-
-输出文件：
-- `release/OneToTwo-{version}-x64-mac.dmg`
-- `release/OneToTwo-{version}-arm64-mac.dmg`
-
-### Linux
-
-```bash
 npm run build:linux
 ```
 
-输出文件：
-- `release/OneToTwo-{version}-x64-linux.AppImage`
-- `release/OneToTwo-{version}-x64-linux.deb`
-
-### 全平台打包
+## 常用命令
 
 ```bash
-npm run build:all
+npm run dev          # 开发模式
+npm run build        # 构建前端
+npm run build:python-exe  # 打包 Python API
+npm run typecheck    # 类型检查
+npm run lint         # 代码检查
+npm run preview      # 预览构建结果
 ```
-
-## 开发指南
-
-### 常用命令
-
-```bash
-# 开发模式
-npm run dev
-
-# 构建前端
-npm run build
-
-# 类型检查
-npm run typecheck
-
-# 代码检查
-npm run lint
-
-# 预览构建结果
-npm run preview
-```
-
-### API 文档
-
-详见 [python-api/README.md](./python-api/README.md)
-
-### 策略引擎文档
-
-详见 [one_to_two_V2/README.md](./one_to_two_V2/README.md)
 
 ## 配置说明
 
-### 默认配置文件
-
-`one_to_two_V2/config/pipeline_defaults.json`
-
-```json
-{
-  "production_train": {"months": 6, "cache_check_months": 6},
-  "daily": {"cache_check_months": 2, "model_filename": "model_latest.joblib"},
-  "emotion_backtest": {"months": 6, "window_days": 64},
-  "rolling": {"train_months": 6, "test_months": 1},
-  "heatmap": {"months": 1, "model_filename": "model_latest.joblib"}
-}
-```
-
-### Electron 配置
-
-`electron-builder.yml` - 打包配置
+- `electron-builder.yml` - 打包配置
+- `one_to_two_V2/config/pipeline_defaults.json` - 策略默认配置
 
 ## 许可证
 

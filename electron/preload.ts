@@ -28,6 +28,11 @@ export type AppPaths = {
   home: string
 }
 
+export type AppSettings = {
+  closeToTray: boolean
+  firstCloseShown: boolean
+}
+
 const validInvokeChannels = [
   'api:get',
   'api:post',
@@ -43,10 +48,13 @@ const validInvokeChannels = [
   'app:getPythonPath',
   'app:getApiUrl',
   'app:getPaths',
+  'app:quit',
   'window:minimize',
   'window:maximize',
   'window:close',
   'window:show',
+  'settings:get',
+  'settings:set',
 ] as const
 
 type InvokeChannel = (typeof validInvokeChannels)[number]
@@ -119,6 +127,20 @@ const electronAPI = {
 
     getPaths: (): Promise<AppPaths> => {
       return ipcRenderer.invoke('app:getPaths')
+    },
+
+    quit: (): Promise<boolean> => {
+      return ipcRenderer.invoke('app:quit')
+    },
+  },
+
+  settings: {
+    get: (): Promise<AppSettings> => {
+      return ipcRenderer.invoke('settings:get')
+    },
+
+    set: (settings: Partial<AppSettings>): Promise<AppSettings> => {
+      return ipcRenderer.invoke('settings:set', settings)
     },
   },
 

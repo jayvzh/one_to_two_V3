@@ -55,7 +55,7 @@ const BacktestPage: React.FC = () => {
   return (
     <div className={styles.backtestPage}>
       <Card title="情绪回测配置" className={styles.configCard}>
-        <Form form={form} layout="vertical" initialValues={{ months: 12 }}>
+        <Form form={form} layout="vertical" initialValues={{ months: 6 }}>
           <Form.Item label="日期选择方式">
             <Radio.Group value={dateMode} onChange={(e) => setDateMode(e.target.value)}>
               <Radio value="months">按月数</Radio>

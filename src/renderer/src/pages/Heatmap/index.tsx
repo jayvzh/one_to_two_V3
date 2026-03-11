@@ -83,7 +83,7 @@ const HeatmapPage: React.FC = () => {
   return (
     <div className={styles.heatmapPage}>
       <Card title="热力图分析配置" className={styles.configCard}>
-        <Form form={form} layout="vertical" initialValues={{ months: 12 }}>
+        <Form form={form} layout="vertical" initialValues={{ months: 1 }}>
           <Form.Item label="日期选择方式">
             <Radio.Group value={dateMode} onChange={(e) => setDateMode(e.target.value)}>
               <Radio value="months">按月数</Radio>

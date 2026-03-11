@@ -2,7 +2,7 @@ import { app, BrowserWindow, shell, ipcMain, Tray, Menu, nativeImage, dialog } f
 import { join, dirname } from 'path'
 import { spawn, ChildProcess, execSync } from 'child_process'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
-import { existsSync } from 'fs'
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs'
 import { fileURLToPath } from 'url'
 
 // 禁用 GPU 缓存以避免权限错误
@@ -16,6 +16,48 @@ app.commandLine.appendSwitch('disable-application-cache')
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
+
+interface AppSettings {
+  closeToTray: boolean
+  firstCloseShown: boolean
+}
+
+const DEFAULT_SETTINGS: AppSettings = {
+  closeToTray: true,
+  firstCloseShown: false,
+}
+
+function getSettingsFilePath(): string {
+  return join(app.getPath('userData'), 'app-settings.json')
+}
+
+function loadSettings(): AppSettings {
+  try {
+    const settingsPath = getSettingsFilePath()
+    if (existsSync(settingsPath)) {
+      const data = readFileSync(settingsPath, 'utf-8')
+      const settings = JSON.parse(data) as Partial<AppSettings>
+      return { ...DEFAULT_SETTINGS, ...settings }
+    }
+  } catch (error) {
+    console.error('[Settings] Failed to load settings:', error)
+  }
+  return { ...DEFAULT_SETTINGS }
+}
+
+function saveSettings(settings: AppSettings): void {
+  try {
+    const settingsPath = getSettingsFilePath()
+    const settingsDir = dirname(settingsPath)
+    if (!existsSync(settingsDir)) {
+      mkdirSync(settingsDir, { recursive: true })
+    }
+    writeFileSync(settingsPath, JSON.stringify(settings, null, 2), 'utf-8')
+    console.log('[Settings] Settings saved:', settings)
+  } catch (error) {
+    console.error('[Settings] Failed to save settings:', error)
+  }
+}
 
 function getProjectRoot(): string {
   let currentDir = __dirname
@@ -40,6 +82,41 @@ let tray: Tray | null = null
 let pythonProcess: ChildProcess | null = null
 let isQuitting = false
 let pythonReady = false
+let appSettings: AppSettings = { ...DEFAULT_SETTINGS }
+
+function findPythonApiExe(): string | null {
+  const projectRoot = getProjectRoot()
+  
+  const possiblePaths = [
+    join(projectRoot, 'resources', 'onetotwo-api.exe'),
+    join(projectRoot, 'dist', 'onetotwo-api.exe'),
+    join(projectRoot, 'onetotwo-api.exe'),
+  ]
+
+  if (!is.dev) {
+    const exeDir = dirname(app.getPath('exe'))
+    possiblePaths.unshift(
+      join(exeDir, 'resources', 'onetotwo-api.exe'),
+      join(exeDir, 'onetotwo-api.exe')
+    )
+    
+    const resourcesPath = process.resourcesPath
+    if (resourcesPath) {
+      possiblePaths.unshift(join(resourcesPath, 'onetotwo-api.exe'))
+    }
+  }
+
+  for (const path of possiblePaths) {
+    console.log(`[Python] Checking path: ${path}`)
+    if (existsSync(path)) {
+      console.log(`[Python] Found Python API executable at: ${path}`)
+      return path
+    }
+  }
+
+  console.log('[Python] No Python API executable found')
+  return null
+}
 
 function findPythonExecutable(): string | null {
   const projectRoot = getProjectRoot()
@@ -69,20 +146,6 @@ function findPythonExecutable(): string | null {
       }
     } catch {
       continue
-    }
-  }
-
-  if (!is.dev) {
-    const possiblePaths = [
-      join(projectRoot, 'resources', 'python', 'python.exe'),
-      join(projectRoot, 'resources', 'python', 'Scripts', 'python.exe'),
-    ]
-
-    for (const path of possiblePaths) {
-      if (existsSync(path)) {
-        console.log(`[Python] Found Python at: ${path}`)
-        return path
-      }
     }
   }
 
@@ -149,7 +212,6 @@ async function checkPortInUse(port: number): Promise<boolean> {
 }
 
 async function startPythonProcess(): Promise<void> {
-  // First check if Python API is already running
   const alreadyRunning = await checkPortInUse(PYTHON_API_PORT)
   if (alreadyRunning) {
     console.log('[Python] Python API is already running on port', PYTHON_API_PORT)
@@ -158,11 +220,108 @@ async function startPythonProcess(): Promise<void> {
   }
 
   return new Promise((resolve, reject) => {
+    const projectRoot = getProjectRoot()
+    
+    if (!is.dev) {
+      const apiExePath = findPythonApiExe()
+      
+      if (apiExePath) {
+        console.log(`[Python] Starting Python API executable...`)
+        console.log(`[Python] API executable: ${apiExePath}`)
+        
+        const exeDir = dirname(apiExePath)
+        const workDir = process.resourcesPath || exeDir
+        console.log(`[Python] Working directory: ${workDir}`)
+        
+        pythonProcess = spawn(apiExePath, [], {
+          cwd: workDir,
+          env: {
+            ...process.env,
+            ONETOTWO_API_HOST: PYTHON_API_HOST,
+            ONETOTWO_API_PORT: String(PYTHON_API_PORT),
+          },
+          windowsHide: true,
+          shell: true,
+          detached: false,
+        })
+
+        pythonProcess.stdout?.on('data', (data) => {
+          const output = data.toString()
+          console.log(`[Python stdout] ${output}`)
+
+          if (output.includes('Uvicorn running') || output.includes('Application startup complete') || output.includes('Starting server')) {
+            pythonReady = true
+            resolve()
+          }
+        })
+
+        pythonProcess.stderr?.on('data', (data) => {
+          const output = data.toString()
+          console.error(`[Python stderr] ${output}`)
+
+          if (output.includes('Uvicorn running') || output.includes('Application startup complete') || output.includes('Starting server')) {
+            pythonReady = true
+            resolve()
+          }
+          
+          if (output.includes('error while attempting to bind') || output.includes('Address already in use') || output.includes('10048')) {
+            if (!pythonReady) {
+              reject(new Error(`Port ${PYTHON_API_PORT} is already in use.`))
+            }
+          }
+        })
+
+        pythonProcess.on('error', (error) => {
+          console.error(`[Python] Process error: ${error.message}`)
+          if (!pythonReady) {
+            reject(new Error(`Failed to start Python process: ${error.message}`))
+          }
+        })
+
+        pythonProcess.on('close', (code, signal) => {
+          console.log(`[Python] Process closed with code ${code}, signal ${signal}`)
+          pythonProcess = null
+          pythonReady = false
+
+          if (!isQuitting && code !== 0 && code !== null) {
+            console.log('[Python] Process exited unexpectedly, attempting restart...')
+            setTimeout(() => {
+              startPythonProcess().catch(console.error)
+            }, 3000)
+          }
+        })
+
+        const timeout = setTimeout(() => {
+          if (!pythonReady) {
+            console.log('[Python] Timeout waiting for startup, assuming ready...')
+            pythonReady = true
+            resolve()
+          }
+        }, 15000)
+
+        const checkInterval = setInterval(async () => {
+          try {
+            const response = await fetch(`${PYTHON_API_URL}/health`)
+            if (response.ok) {
+              clearTimeout(timeout)
+              clearInterval(checkInterval)
+              pythonReady = true
+              console.log('[Python] API server is ready')
+              resolve()
+            }
+          } catch {
+            // Server not ready yet
+          }
+        }, 500)
+        
+        return
+      }
+    }
+
     const pythonPath = findPythonExecutable()
     const apiPath = getPythonApiPath()
-    const projectRoot = getProjectRoot()
 
-    console.log(`[Python] Starting Python API server...`)
+    console.log(`[Python] Starting Python API server (dev mode)...`)
     console.log(`[Python] Python path: ${pythonPath}`)
     console.log(`[Python] API path: ${apiPath}`)
     console.log(`[Python] Project root: ${projectRoot}`)
@@ -179,9 +338,8 @@ async function startPythonProcess(): Promise<void> {
 
     const args = ['-m', 'uvicorn', 'main:app', '--host', PYTHON_API_HOST, '--port', String(PYTHON_API_PORT)]
     
-    const apiDir = dirname(apiPath)
-    const v2Dir = is.dev ? join(projectRoot, 'one_to_two_V2') : join(projectRoot, 'resources', 'one_to_two_V2')
-    const apiDirForCwd = is.dev ? join(projectRoot, 'python-api') : join(projectRoot, 'resources', 'python-api')
+    const v2Dir = join(projectRoot, 'one_to_two_V2')
+    const apiDirForCwd = join(projectRoot, 'python-api')
 
     pythonProcess = spawn(pythonPath, args, {
       cwd: apiDirForCwd,
@@ -388,9 +546,20 @@ function createTray(): void {
     },
     { type: 'separator' },
     {
-      label: '退出应用',
-      click: () => {
+      label: '最小化到托盘',
+      type: 'checkbox',
+      checked: appSettings.closeToTray,
+      click: (menuItem) => {
+        appSettings.closeToTray = menuItem.checked
+        saveSettings(appSettings)
+      },
+    },
+    { type: 'separator' },
+    {
+      label: '完全退出',
+      click: async () => {
         isQuitting = true
+        await stopPythonProcess()
         app.quit()
       },
     },
@@ -437,10 +606,35 @@ function createWindow(): void {
     }
   })
 
-  mainWindow.on('close', (event) => {
-    if (!isQuitting) {
-      event.preventDefault()
-    mainWindow?.hide()
+  mainWindow.on('close', async (event) => {
+    if (isQuitting) {
+      return
+    }
+
+    event.preventDefault()
+
+    if (!appSettings.firstCloseShown) {
+      const result = await dialog.showMessageBox(mainWindow!, {
+        type: 'question',
+        title: '选择关闭行为',
+        message: '您希望关闭窗口时执行什么操作？',
+        detail: '您可以在设置中随时更改此选项。',
+        buttons: ['最小化到托盘', '完全退出'],
+        defaultId: 0,
+        cancelId: 0,
+      })
+
+      appSettings.firstCloseShown = true
+      appSettings.closeToTray = result.response === 0
+      saveSettings(appSettings)
+    }
+
+    if (appSettings.closeToTray) {
+      mainWindow?.hide()
+    } else {
+      isQuitting = true
+      await stopPythonProcess()
+      app.quit()
     }
   })
 
@@ -555,11 +749,31 @@ function setupIpcHandlers(): void {
     return true
   })
 
+  ipcMain.handle('settings:get', () => {
+    return appSettings
+  })
+
+  ipcMain.handle('settings:set', (_event, settings: Partial<AppSettings>) => {
+    appSettings = { ...appSettings, ...settings }
+    saveSettings(appSettings)
+    return appSettings
+  })
+
+  ipcMain.handle('app:quit', async () => {
+    isQuitting = true
+    await stopPythonProcess()
+    app.quit()
+    return true
+  })
+
   ipcMain.on('ping', () => console.log('pong'))
 }
 
 app.whenReady().then(async () => {
   electronApp.setAppUserModelId('com.one_to_two.v3')
+
+  appSettings = loadSettings()
+  console.log('[Settings] Loaded settings:', appSettings)
 
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)

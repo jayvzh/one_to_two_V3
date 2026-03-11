@@ -12,32 +12,14 @@ files:
   - package.json
 
 extraResources:
-  - from: python-api
-    to: python-api
-    filter:
-      - "**/*.py"
-      - "!**/__pycache__/**"
-      - "!**/*.pyc"
-      - "!**/.git/**"
-  - from: one_to_two_V2
-    to: one_to_two_V2
-    filter:
-      - "**/*.py"
-      - "!**/__pycache__/**"
-      - "!**/*.pyc"
-      - "!**/.git/**"
-      - "!**/cache/**"
-      - "!**/models/**"
-      - "!**/snapshots/**"
-      - "!**/venv/**"
-      - "!**/data/**"
-      - "!**/logs/**"
-      - "!**/reports/**"
-      - "**/config/**"
-      - "**/pipeline/templates/**"
+  - from: dist/onetotwo-api.exe
+    to: onetotwo-api.exe
+  - from: one_to_two_V2/config
+    to: one_to_two_V2/config
+  - from: one_to_two_V2/src/pipeline/templates
+    to: one_to_two_V2/src/pipeline/templates
 
 asarUnpack:
-  - python-api/**/*
   - one_to_two_V2/**/*
 
 win:

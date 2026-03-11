@@ -25,9 +25,7 @@
   "include": [
     "src/renderer/src/**/*.ts",
     "src/renderer/src/**/*.tsx",
-    "src/renderer/src/**/*.d.ts"
-  ],
-  "references": [
-    { "path": "./tsconfig.node.json" }
+    "src/renderer/src/**/*.d.ts",
+    "electron/**/*.ts"
   ]
 }

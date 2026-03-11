@@ -22,6 +22,11 @@ export type AppPaths = {
   home: string
 }
 
+export type AppSettings = {
+  closeToTray: boolean
+  firstCloseShown: boolean
+}
+
 export type ElectronAPI = {
   api: {
     get: <T = unknown>(endpoint: string) => Promise<ApiResponse<T>>
@@ -47,6 +52,12 @@ export type ElectronAPI = {
     getPythonPath: () => Promise<string>
     getApiUrl: () => Promise<string>
     getPaths: () => Promise<AppPaths>
+    quit: () => Promise<boolean>
+  }
+
+  settings: {
+    get: () => Promise<AppSettings>
+    set: (settings: Partial<AppSettings>) => Promise<AppSettings>
   }
 
   window: {
