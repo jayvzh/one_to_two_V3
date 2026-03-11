@@ -1,9 +1,12 @@
 import { app, BrowserWindow, shell, ipcMain, Tray, Menu, nativeImage, dialog } from 'electron'
 import { join, dirname } from 'path'
-import { spawn, ChildProcess, execSync } from 'child_process'
+import { spawn, ChildProcess, exec, execSync } from 'child_process'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs'
 import { fileURLToPath } from 'url'
+import { promisify } from 'util'
+
+const execAsync = promisify(exec)
 
 // 禁用 GPU 缓存以避免权限错误
 app.commandLine.appendSwitch('disable-gpu-shader-disk-cache')
@@ -83,6 +86,24 @@ let pythonProcess: ChildProcess | null = null
 let isQuitting = false
 let pythonReady = false
 let appSettings: AppSettings = { ...DEFAULT_SETTINGS }
+
+async function killOrphanedPythonProcesses(): Promise<void> {
+  if (process.platform !== 'win32') return
+  
+  try {
+    const { stdout } = await execAsync('tasklist /FI "IMAGENAME eq onetotwo-api.exe" /FO CSV /NH', { 
+      timeout: 5000 
+    })
+    
+    if (stdout.includes('onetotwo-api.exe')) {
+      console.log('[Python] Found orphaned onetotwo-api.exe processes, cleaning up...')
+      await execAsync('taskkill /F /IM onetotwo-api.exe', { timeout: 5000 })
+      console.log('[Python] Cleaned up orphaned processes')
+    }
+  } catch (error) {
+    console.log('[Python] No orphaned processes found or cleanup failed:', error)
+  }
+}
 
 function findPythonApiExe(): string | null {
   const projectRoot = getProjectRoot()
@@ -241,7 +262,6 @@ async function startPythonProcess(): Promise<void> {
             ONETOTWO_API_PORT: String(PYTHON_API_PORT),
           },
           windowsHide: true,
-          shell: true,
           detached: false,
         })
 
@@ -423,7 +443,7 @@ async function startPythonProcess(): Promise<void> {
 }
 
 async function stopPythonProcess(): Promise<void> {
-  return new Promise((resolve) => {
+  return new Promise(async (resolve) => {
     if (!pythonProcess) {
       resolve()
       return
@@ -432,22 +452,35 @@ async function stopPythonProcess(): Promise<void> {
     console.log('[Python] Stopping Python API server...')
     isQuitting = true
 
-    const forceKillTimeout = setTimeout(() => {
-      if (pythonProcess) {
-        console.log('[Python] Force killing process...')
-        pythonProcess.kill('SIGKILL')
+    const pid = pythonProcess.pid
+    console.log(`[Python] Process PID: ${pid}`)
+
+    if (process.platform === 'win32' && pid) {
+      try {
+        await execAsync(`taskkill /pid ${pid} /T /F`, { timeout: 5000 })
+        console.log('[Python] Process killed via taskkill')
+      } catch (error) {
+        console.log('[Python] taskkill error (process may already be dead):', error)
       }
-    }, 5000)
+    } else {
+      const forceKillTimeout = setTimeout(() => {
+        if (pythonProcess) {
+          console.log('[Python] Force killing process...')
+          pythonProcess.kill('SIGKILL')
+        }
+      }, 5000)
 
-    pythonProcess.on('close', () => {
-      clearTimeout(forceKillTimeout)
-      pythonProcess = null
-      pythonReady = false
-      console.log('[Python] Process stopped')
-      resolve()
-    })
+      pythonProcess.on('close', () => {
+        clearTimeout(forceKillTimeout)
+        console.log('[Python] Process stopped')
+      })
 
-    pythonProcess.kill('SIGTERM')
+      pythonProcess.kill('SIGTERM')
+    }
+
+    pythonProcess = null
+    pythonReady = false
+    resolve()
   })
 }
 
@@ -775,6 +808,8 @@ app.whenReady().then(async () => {
   appSettings = loadSettings()
   console.log('[Settings] Loaded settings:', appSettings)
 
+  await killOrphanedPythonProcesses()
+
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
 
@@ -829,6 +864,7 @@ app.on('window-all-closed', () => {
 
 app.on('will-quit', async () => {
   await stopPythonProcess()
+  await killOrphanedPythonProcesses()
   if (tray) {
     tray.destroy()
     tray = null

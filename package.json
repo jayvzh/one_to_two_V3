@@ -12,7 +12,6 @@
     "build": "electron-vite build",
     "build:renderer": "vite build",
     "build:electron": "electron-vite build",
-    "build:python": "node scripts/build-python.js",
     "build:python-exe": "node scripts/build-python-exe.js",
     "preview": "electron-vite preview",
     "start": "electron-vite preview",

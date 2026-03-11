@@ -130,12 +130,13 @@ hidden_imports.extend(collect_submodules('models'))
 hidden_imports.extend(['py_mini_racer'])
 
 # Get py_mini_racer package path for including DLL
+# NOTE: py_mini_racer's legacy code (py_mini_racer.py) expects DLL at _MEIPASS root,
+# not in py_mini_racer subdirectory. So we use '.' as the destination.
 try:
     import py_mini_racer
     py_mini_racer_path = Path(py_mini_racer.__file__).parent
-    # Add the DLL and ICU data file
-    binaries.append((str(py_mini_racer_path / 'mini_racer.dll'), 'py_mini_racer'))
-    datas.append((str(py_mini_racer_path / 'icudtl.dat'), 'py_mini_racer'))
+    binaries.append((str(py_mini_racer_path / 'mini_racer.dll'), '.'))
+    datas.append((str(py_mini_racer_path / 'icudtl.dat'), '.'))
     print(f"Included py_mini_racer from: {py_mini_racer_path}")
 except Exception as e:
     print(f"Warning: Could not locate py_mini_racer: {e}")

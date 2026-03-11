@@ -1,5 +1,4 @@
 import { execSync } from 'child_process'
-import { existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -32,14 +31,6 @@ async function main() {
   
   log('Installing electron-builder app dependencies...')
   runCommand('npx electron-builder install-app-deps')
-  
-  const venvPath = join(projectRoot, 'resources', 'python-venv')
-  const requirementsPath = join(projectRoot, 'one_to_two_V2', 'requirements.txt')
-  
-  if (!existsSync(venvPath) && existsSync(requirementsPath)) {
-    log('Python virtual environment not found.')
-    log('To set up Python environment, run: npm run build:python')
-  }
   
   log('Postinstall completed!')
 }
