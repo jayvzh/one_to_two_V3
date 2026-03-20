@@ -2,16 +2,25 @@ from pathlib import Path
 from typing import Optional
 from datetime import datetime
 import json
+import zipfile
+import tempfile
+import shutil
+import sys
+import os
 
-V2_DIR = Path(__file__).parent.parent.parent / "one_to_two_V2"
+from core.paths import get_data_path
+
+PROJECT_ROOT = get_data_path()
+
+from data.cache import get_zt_cache_range, get_index_cache_range
 
 
 class FileService:
     def __init__(self, base_dir: Optional[Path] = None):
-        self.base_dir = base_dir or V2_DIR
+        self.base_dir = base_dir or PROJECT_ROOT
         self.report_dir = self.base_dir / "reports"
-        self.model_dir = self.base_dir / "data" / "models"
-        self.cache_dir = self.base_dir / "data" / "cache"
+        self.model_dir = self.base_dir / "datasets" / "models"
+        self.cache_dir = self.base_dir / "datasets" / "cache"
 
     def get_reports(self, report_type: Optional[str] = None) -> list[dict]:
         reports = []
@@ -102,3 +111,101 @@ class FileService:
         
         report_path.unlink()
         return True
+
+    def import_cache(self, zip_path: Path) -> dict:
+        if not zip_path.exists():
+            raise ValueError(f"文件不存在: {zip_path}")
+        
+        if not zipfile.is_zipfile(zip_path):
+            raise ValueError("文件不是有效的 zip 格式")
+        
+        zt_count = 0
+        index_count = 0
+        
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            
+            with zipfile.ZipFile(zip_path, 'r') as zf:
+                zf.extractall(temp_path)
+            
+            extracted_zt_dir = temp_path / "zt"
+            extracted_index_dir = temp_path / "index"
+            
+            if not extracted_zt_dir.exists() and not extracted_index_dir.exists():
+                raise ValueError("zip 文件必须包含 zt/ 或 index/ 目录")
+            
+            if extracted_zt_dir.exists() and extracted_zt_dir.is_dir():
+                zt_files = list(extracted_zt_dir.glob("*.csv"))
+                if len(zt_files) == 0:
+                    raise ValueError("zt 目录中没有找到 csv 文件")
+                
+                target_zt_dir = self.cache_dir / "zt"
+                target_zt_dir.mkdir(parents=True, exist_ok=True)
+                
+                for zt_file in zt_files:
+                    target_file = target_zt_dir / zt_file.name
+                    shutil.copy2(zt_file, target_file)
+                    zt_count += 1
+            
+            if extracted_index_dir.exists() and extracted_index_dir.is_dir():
+                index_files = list(extracted_index_dir.glob("*.csv"))
+                if len(index_files) == 0:
+                    raise ValueError("index 目录中没有找到 csv 文件")
+                
+                target_index_dir = self.cache_dir / "index"
+                target_index_dir.mkdir(parents=True, exist_ok=True)
+                
+                for index_file in index_files:
+                    target_file = target_index_dir / index_file.name
+                    shutil.copy2(index_file, target_file)
+                    index_count += 1
+        
+        return {
+            "success": True,
+            "message": f"成功导入 {zt_count} 个涨停池文件和 {index_count} 个指数文件",
+            "zt_count": zt_count,
+            "index_count": index_count
+        }
+
+    def export_cache(self) -> tuple[Path, str]:
+        if not self.cache_dir.exists():
+            raise ValueError("缓存目录不存在")
+        
+        cache_files = list(self.cache_dir.glob("*"))
+        if not cache_files:
+            raise ValueError("缓存目录为空")
+        
+        exports_dir = self.base_dir / "datasets" / "exports"
+        exports_dir.mkdir(parents=True, exist_ok=True)
+        
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"cache_export_{timestamp}.zip"
+        zip_path = exports_dir / filename
+        
+        with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+            for file_path in self.cache_dir.rglob("*"):
+                if file_path.is_file():
+                    arcname = file_path.relative_to(self.cache_dir)
+                    zipf.write(file_path, arcname)
+        
+        return zip_path, filename
+
+    def get_cache_status(self) -> dict:
+        zt_range = get_zt_cache_range(self.cache_dir)
+        index_range = get_index_cache_range(self.cache_dir)
+        
+        return {
+            "zt_cache": {
+                "available": zt_range.available,
+                "start_date": zt_range.start_date,
+                "end_date": zt_range.end_date,
+                "count": zt_range.count,
+            },
+            "index_cache": {
+                "available": index_range.available,
+                "start_date": index_range.start_date,
+                "end_date": index_range.end_date,
+                "count": index_range.count,
+            },
+            "cache_dir": str(self.cache_dir),
+        }

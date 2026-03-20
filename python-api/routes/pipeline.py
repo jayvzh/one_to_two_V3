@@ -1,14 +1,19 @@
-from fastapi import APIRouter, BackgroundTasks, HTTPException
+from fastapi import APIRouter, BackgroundTasks, HTTPException, UploadFile, File
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import Optional
 import asyncio
+import tempfile
+import os
 
 from services import PipelineService
-from models.tasks import TaskManager, TaskState
+from services.file_service import FileService
+from schemas.tasks import TaskManager, TaskState
 
 router = APIRouter()
 task_manager = TaskManager()
 pipeline_service = PipelineService()
+file_service = FileService()
 
 
 class TrainRequest(BaseModel):
@@ -285,3 +290,31 @@ async def sync_cache(request: SyncRequest, background_tasks: BackgroundTasks):
     task = task_manager.create_task("sync")
     background_tasks.add_task(run_sync_task, task.task_id, request)
     return {"success": True, "task_id": task.task_id, "message": "缓存同步任务已创建"}
+
+
+@router.get("/cache/status")
+async def get_cache_status():
+    """获取缓存状态"""
+    return file_service.get_cache_status()
+
+
+@router.post("/cache/import")
+async def import_cache(file: UploadFile = File(...)):
+    """导入缓存数据"""
+    if not file.filename or not file.filename.endswith('.zip'):
+        raise HTTPException(status_code=400, detail="请上传 zip 文件")
+    
+    with tempfile.NamedTemporaryFile(delete=False, suffix='.zip') as temp_file:
+        temp_path = temp_file.name
+        content = await file.read()
+        temp_file.write(content)
+    
+    try:
+        from pathlib import Path
+        result = file_service.import_cache(Path(temp_path))
+        return result
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    finally:
+        if os.path.exists(temp_path):
+            os.unlink(temp_path)

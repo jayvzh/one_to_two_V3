@@ -39,6 +39,8 @@ const validInvokeChannels = [
   'api:put',
   'api:delete',
   'api:health',
+  'api:download',
+  'api:upload',
   'dialog:openFile',
   'dialog:saveFile',
   'dialog:openDirectory',
@@ -85,6 +87,14 @@ const electronAPI = {
 
     health: (): Promise<{ healthy: boolean }> => {
       return ipcRenderer.invoke('api:health')
+    },
+
+    download: (endpoint: string): Promise<ApiResponse<{ path: string }>> => {
+      return ipcRenderer.invoke('api:download', endpoint)
+    },
+
+    uploadFile: <T = unknown>(endpoint: string, filePath: string): Promise<ApiResponse<T>> => {
+      return ipcRenderer.invoke('api:upload', endpoint, filePath)
     },
   },
 

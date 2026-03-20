@@ -153,6 +153,16 @@ function findPythonExecutable(): string | null {
       return path
     }
   }
+
+  if (process.env.CONDA_PREFIX) {
+    const condaPython = process.platform === 'win32'
+      ? join(process.env.CONDA_PREFIX, 'python.exe')
+      : join(process.env.CONDA_PREFIX, 'bin', 'python')
+    if (existsSync(condaPython)) {
+      console.log(`[Python] Found conda Python at: ${condaPython}`)
+      return condaPython
+    }
+  }
   
   const pythonCommands = process.platform === 'win32' 
     ? ['python.exe', 'python3.exe', 'py.exe']
@@ -160,10 +170,13 @@ function findPythonExecutable(): string | null {
 
   for (const cmd of pythonCommands) {
     try {
-      const fullPath = execSync(`where ${cmd}`, { encoding: 'utf-8', timeout: 5000 }).trim().split('\n')[0]
-      if (fullPath && existsSync(fullPath)) {
-        console.log(`[Python] Found working Python: ${fullPath}`)
-        return fullPath
+      const results = execSync(`where ${cmd}`, { encoding: 'utf-8', timeout: 5000 }).trim().split('\n')
+      for (const fullPath of results) {
+        const trimmed = fullPath.trim()
+        if (trimmed && existsSync(trimmed) && !trimmed.toLowerCase().includes('msys64')) {
+          console.log(`[Python] Found working Python: ${trimmed}`)
+          return trimmed
+        }
       }
     } catch {
       continue
@@ -251,7 +264,12 @@ async function startPythonProcess(): Promise<void> {
         console.log(`[Python] API executable: ${apiExePath}`)
         
         const exeDir = dirname(apiExePath)
-        const workDir = process.resourcesPath || exeDir
+        let workDir: string
+        if (exeDir.endsWith('resources') || exeDir.endsWith('resources\\') || exeDir.endsWith('resources/')) {
+          workDir = dirname(exeDir)
+        } else {
+          workDir = exeDir
+        }
         console.log(`[Python] Working directory: ${workDir}`)
         
         pythonProcess = spawn(apiExePath, [], {
@@ -357,16 +375,13 @@ async function startPythonProcess(): Promise<void> {
     }
 
     const args = ['-m', 'uvicorn', 'main:app', '--host', PYTHON_API_HOST, '--port', String(PYTHON_API_PORT)]
-    
-    const v2Dir = join(projectRoot, 'one_to_two_V2')
-    const apiDirForCwd = join(projectRoot, 'python-api')
 
     pythonProcess = spawn(pythonPath, args, {
-      cwd: apiDirForCwd,
+      cwd: projectRoot,
       env: {
         ...process.env,
         PYTHONUNBUFFERED: '1',
-        PYTHONPATH: v2Dir,
+        PYTHONPATH: join(projectRoot, 'python-api'),
       },
       windowsHide: true,
     })
@@ -627,7 +642,6 @@ function createWindow(): void {
       sandbox: false,
       contextIsolation: true,
       nodeIntegration: false,
-      // 使用内存分区避免缓存冲突
       partition: 'persist:main',
     },
   })
@@ -702,6 +716,66 @@ function setupIpcHandlers(): void {
 
   ipcMain.handle('api:health', async () => {
     return { healthy: await checkPythonHealth() }
+  })
+
+  ipcMain.handle('api:download', async (_event, endpoint: string) => {
+    try {
+      if (!mainWindow) {
+        return { success: false, error: 'No main window' }
+      }
+
+      const saveResult = await dialog.showSaveDialog(mainWindow, {
+        defaultPath: 'cache_export.zip',
+        filters: [{ name: 'ZIP Files', extensions: ['zip'] }],
+      })
+
+      if (saveResult.canceled || !saveResult.filePath) {
+        return { success: false, error: 'Cancelled' }
+      }
+
+      const response = await fetch(`${PYTHON_API_URL}${endpoint}`)
+      if (!response.ok) {
+        return { success: false, error: `HTTP ${response.status}` }
+      }
+
+      const arrayBuffer = await response.arrayBuffer()
+      const buffer = Buffer.from(arrayBuffer)
+      writeFileSync(saveResult.filePath, buffer)
+
+      return { success: true, data: { path: saveResult.filePath } }
+    } catch (error) {
+      return { success: false, error: error instanceof Error ? error.message : 'Download failed' }
+    }
+  })
+
+  ipcMain.handle('api:upload', async (_event, endpoint: string, filePath: string) => {
+    try {
+      const buffer = readFileSync(filePath)
+      const formData = new FormData()
+      const blob = new Blob([buffer])
+      formData.append('file', blob, 'cache_import.zip')
+
+      const response = await fetch(`${PYTHON_API_URL}${endpoint}`, {
+        method: 'POST',
+        body: formData,
+      })
+
+      if (!response.ok) {
+        const errorData = (await response.json().catch(() => ({ detail: 'Unknown error' }))) as {
+          detail?: string
+          error?: string
+        }
+        return {
+          success: false,
+          error: errorData.detail || errorData.error || `HTTP ${response.status}`,
+        }
+      }
+
+      const data = await response.json()
+      return { success: true, data }
+    } catch (error) {
+      return { success: false, error: error instanceof Error ? error.message : 'Upload failed' }
+    }
   })
 
   ipcMain.handle('dialog:openFile', async (_event, options: Electron.OpenDialogOptions) => {

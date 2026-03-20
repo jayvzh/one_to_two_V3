@@ -3,29 +3,67 @@ from typing import Optional
 import sys
 import os
 
-V2_DIR = Path(__file__).parent.parent.parent / "one_to_two_V2"
-if str(V2_DIR) not in sys.path:
-    sys.path.insert(0, str(V2_DIR))
+from core.paths import get_data_path
 
-os.chdir(V2_DIR)
+PROJECT_ROOT = get_data_path()
 
-from src.pipeline.train_model import train_production_model
-from src.pipeline.daily import DailyScorer
-from src.pipeline.rolling import StabilityEvaluator, run_sensitivity_test
-from src.pipeline.backtest_emotion import EmotionLayerBacktest
-from src.pipeline.heatmap import HeatmapAnalyzer
-from src.data.sync_cache import run_sync, SyncConfig, ensure_cache_for_training
-from src.pipeline.config import load_pipeline_defaults, PipelineDefaults
-from src.model.trainer import OneToTwoPredictor
+os.chdir(PROJECT_ROOT)
+
+
+def _get_pipeline_defaults():
+    from pipeline.config import load_pipeline_defaults
+    return load_pipeline_defaults
+
+
+def _get_train_production_model():
+    from pipeline.train_model import train_production_model
+    return train_production_model
+
+
+def _get_daily_scorer():
+    from pipeline.daily import DailyScorer
+    return DailyScorer
+
+
+def _get_rolling_modules():
+    from pipeline.rolling import StabilityEvaluator, run_sensitivity_test
+    return StabilityEvaluator, run_sensitivity_test
+
+
+def _get_emotion_backtest():
+    from pipeline.backtest_emotion import EmotionLayerBacktest
+    return EmotionLayerBacktest
+
+
+def _get_heatmap_analyzer():
+    from pipeline.heatmap import HeatmapAnalyzer
+    return HeatmapAnalyzer
+
+
+def _get_sync_modules():
+    from data.sync_cache import run_sync, SyncConfig, ensure_cache_for_training
+    return run_sync, SyncConfig, ensure_cache_for_training
+
+
+def _get_predictor():
+    from ml.trainer import OneToTwoPredictor
+    return OneToTwoPredictor
 
 
 class PipelineService:
     def __init__(self, base_dir: Optional[Path] = None):
-        self.base_dir = base_dir or V2_DIR
-        self.cache_dir = self.base_dir / "data" / "cache"
-        self.model_dir = self.base_dir / "data" / "models"
+        self.base_dir = base_dir or PROJECT_ROOT
+        self.cache_dir = self.base_dir / "datasets" / "cache"
+        self.model_dir = self.base_dir / "datasets" / "models"
         self.report_dir = self.base_dir / "reports"
-        self.defaults = load_pipeline_defaults(self.base_dir)
+        self._defaults = None
+
+    @property
+    def defaults(self):
+        if self._defaults is None:
+            load_pipeline_defaults = _get_pipeline_defaults()
+            self._defaults = load_pipeline_defaults(self.base_dir)
+        return self._defaults
 
     async def train_model(
         self,
@@ -34,6 +72,9 @@ class PipelineService:
         end_date: Optional[str] = None,
         log_callback=None,
     ) -> dict:
+        train_production_model = _get_train_production_model()
+        _, _, ensure_cache_for_training = _get_sync_modules()
+        
         if log_callback:
             log_callback("开始模型训练...")
         
@@ -80,6 +121,7 @@ class PipelineService:
         log_callback=None,
     ) -> dict:
         from datetime import datetime
+        DailyScorer = _get_daily_scorer()
         
         if log_callback:
             log_callback("开始生成日报...")
@@ -119,6 +161,9 @@ class PipelineService:
         sensitivity: bool = False,
         log_callback=None,
     ) -> dict:
+        StabilityEvaluator, run_sensitivity_test = _get_rolling_modules()
+        _, _, ensure_cache_for_training = _get_sync_modules()
+        
         if log_callback:
             log_callback("开始滚动评估...")
         
@@ -203,6 +248,8 @@ class PipelineService:
         months: Optional[int] = None,
         log_callback=None,
     ) -> dict:
+        EmotionLayerBacktest = _get_emotion_backtest()
+        
         if log_callback:
             log_callback("开始情绪分层回测...")
         
@@ -250,6 +297,8 @@ class PipelineService:
         model: Optional[str] = None,
         log_callback=None,
     ) -> dict:
+        HeatmapAnalyzer = _get_heatmap_analyzer()
+        
         if log_callback:
             log_callback("开始热力图分析...")
         
@@ -300,6 +349,8 @@ class PipelineService:
         index_months: int = 2,
         log_callback=None,
     ) -> dict:
+        run_sync, SyncConfig, _ = _get_sync_modules()
+        
         if log_callback:
             log_callback("开始同步缓存...")
         
@@ -324,6 +375,7 @@ class PipelineService:
         }
 
     def get_model_list(self) -> list[dict]:
+        OneToTwoPredictor = _get_predictor()
         models = []
         
         for model_file in sorted(self.model_dir.glob("model_*.joblib")):

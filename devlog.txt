@@ -1,0 +1,166 @@
+[Python] Process closed with code 1, signal null
+[Python] Process exited unexpectedly, attempting restart...
+[Python] Timeout waiting for startup, assuming ready...
+[Python] Found working Python: E:\Code\miniconda3\python.exe
+[Python] Found API at: E:\Code\github\one_to_two_V3\python-api\main.py
+[Python] Starting Python API server (dev mode)...
+[Python] Python path: E:\Code\miniconda3\python.exe
+[Python] API path: E:\Code\github\one_to_two_V3\python-api\main.py
+[Python] Project root: E:\Code\github\one_to_two_V3
+[Python stderr] Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Code\miniconda3\Lib\site-packages\uvicorn\__main__.py", line 4, in <module>
+
+[Python stderr]     uvicorn.main()
+  File "E:\Code\miniconda3\Lib\site-packages\click\core.py", line 1485, in __call__
+
+[Python stderr]     return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+[Python stderr]   File "E:\Code\miniconda3\Lib\site-packages\click\core.py", line 1406, in main
+
+[Python stderr]     rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+[Python stderr]
+  File "E:\Code\miniconda3\Lib\site-packages\click\core.py", line 1269, in invoke
+
+[Python stderr]     return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Code\miniconda3\Lib\site-packages\click\core.py", line 824, in invoke
+
+[Python stderr]     return callback(*args, **kwargs)
+
+[Python stderr]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Code\miniconda3\Lib\site-packages\uvicorn\main.py", line 433, in main
+
+[Python stderr]     run(
+  File "E:\Code\miniconda3\Lib\site-packages\uvicorn\main.py", line 606, in run
+
+[Python stderr]     server.run()
+  File "E:\Code\miniconda3\Lib\site-packages\uvicorn\server.py", line 75, in run
+
+[Python stderr]     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[Python stderr] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Code\miniconda3\Lib\asyncio\runners.py", line 195, in run
+
+[Python stderr]     return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "E:\Code\miniconda3\Lib\asyncio\runners.py", line 118, in run
+
+[Python stderr]     return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Code\miniconda3\Lib\asyncio\base_events.py", line 691, in run_until_complete
+
+[Python stderr]     return future.result()
+
+[Python stderr]            ^^^^^^^^^^^^^^^
+  File "E:\Code\miniconda3\Lib\site-packages\uvicorn\server.py", line 79, in serve
+
+[Python stderr]     await self._serve(sockets)
+  File "E:\Code\miniconda3\Lib\site-packages\uvicorn\server.py", line 86, in _serve
+
+[Python stderr]     config.load()
+  File "E:\Code\miniconda3\Lib\site-packages\uvicorn\config.py", line 441, in load
+
+[Python stderr]     self.loaded_app = import_from_string(self.app)
+
+[Python stderr]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Code\miniconda3\Lib\site-packages\uvicorn\importer.py", line 19, in import_from_string
+
+[Python stderr]     module = importlib.import_module(module_str)
+             ^
+[Python stderr] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Code\miniconda3\Lib\importlib\__init__.py", line 90, in import_module
+
+[Python stderr]     return _bootstrap._gcd_import(name[level:], package, level)
+
+[Python stderr] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "E:\Code\github\one_to_two_V3\python-api\main.py", line 21, in <module>
+
+[Python stderr]     from routes import router as api_router
+  File "E:\Code\github\one_to_two_V3\python-api\routes\__init__.py", line 20, in <module>
+
+[Python stderr]     _include_routers()
+
+[Python stderr]   File "E:\Code\github\one_to_two_V3\python-api\routes\__init__.py", line 6, in _include_routers
+    from .pipeline import router as pipeline_router
+  File "E:\Code\github\one_to_two_V3\python-api\routes\pipeline.py", line 9, in <module>
+    from services import PipelineService
+  File "E:\Code\github\one_to_two_V3\python-api\services\__init__.py", line 3, in __getattr__
+    from .pipeline_service import PipelineService
+
+[Python stderr]   File "E:\Code\github\one_to_two_V3\python-api\services\pipeline_service.py", line 12, in <module>
+
+[Python stderr]     from pipeline.train_model import train_production_model
+  File "E:\Code\github\one_to_two_V3\python-api\pipeline\train_model.py", line 31, in <module>
+
+[Python stderr]     from ml.trainer import ModelMeta, OneToTwoDatasetBuilder, OneToTwoPredictor
+  File "E:\Code\github\one_to_two_V3\python-api\ml\__init__.py", line 6, in <module>
+
+[Python stderr]     from .trainer import Dataset, OneToTwoDatasetBuilder, OneToTwoPredictor
+  File "E:\Code\github\one_to_two_V3\python-api\ml\trainer.py", line 20, in <module>
+
+[Python stderr]     from sklearn.linear_model import LogisticRegression
+  File "E:\Code\miniconda3\Lib\site-packages\sklearn\__init__.py", line 70, in <module>
+
+[Python stderr]     from sklearn.base import clone  # noqa: E402
+
+[Python stderr]     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Code\miniconda3\Lib\site-packages\sklearn\base.py", line 19, in <module>
+
+[Python stderr]     from sklearn.utils._metadata_requests import _MetadataRequester, _routing_enabled
+
+[Python stderr]   File "E:\Code\miniconda3\Lib\site-packages\sklearn\utils\__init__.py", line 9, in <module>
+
+[Python stderr]     from sklearn.utils._chunking import gen_batches, gen_even_slices
+
+[Python stderr]   File "E:\Code\miniconda3\Lib\site-packages\sklearn\utils\_chunking.py", line 11, in <module>
+
+[Python stderr]     from sklearn.utils._param_validation import Interval, validate_params
+
+[Python stderr]   File "E:\Code\miniconda3\Lib\site-packages\sklearn\utils\_param_validation.py", line 17, in <module>
+
+[Python stderr]     from sklearn.utils.validation import _is_arraylike_not_scalar
+  File "E:\Code\miniconda3\Lib\site-packages\sklearn\utils\validation.py", line 24, in <module>
+
+[Python stderr]     from sklearn.utils._array_api import (
+  File "E:\Code\miniconda3\Lib\site-packages\sklearn\utils\_array_api.py", line 20, in <module>
+
+[Python stderr]     from sklearn.utils.fixes import parse_version
+  File "E:\Code\miniconda3\Lib\site-packages\sklearn\utils\fixes.py", line 15, in <module>
+
+[Python stderr]     import scipy.sparse.linalg
+
+[Python stderr]   File "E:\Code\miniconda3\Lib\site-packages\scipy\sparse\linalg\__init__.py", line 133, in <module>
+
+[Python stderr]     from ._dsolve import *
+  File "E:\Code\miniconda3\Lib\site-packages\scipy\sparse\linalg\_dsolve\__init__.py", line 58, in <module>
+
+[Python stderr]     from .linsolve import *
+  File "E:\Code\miniconda3\Lib\site-packages\scipy\sparse\linalg\_dsolve\linsolve.py", line 13, in <module>
+
+[Python stderr]     from . import _superlu
+ImportError
+[Python stderr] : DLL load failed while importing _superlu: %1 锟斤拷锟斤拷锟斤拷效锟斤拷 Win32 应锟矫筹拷锟斤拷
+
+[Python] Process closed with code 1, signal null
+[Python] Process exited unexpectedly, attempting restart...
+[Python] Timeout waiting for startup, assuming ready...
+[Python] Found working Python: E:\Code\miniconda3\python.exe
+[Python] Found API at: E:\Code\github\one_to_two_V3\python-api\main.py
+[Python] Starting Python API server (dev mode)...
+[Python] Python path: E:\Code\miniconda3\python.exe
+[Python] API path: E:\Code\github\one_to_two_V3\python-api\main.py
+[Python] Project root: E:\Code\github\one_to_two_V3
+[Python stderr] Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Code\miniconda3\Lib\site-packages\uvicorn\__main__.py", line 4, in <module>

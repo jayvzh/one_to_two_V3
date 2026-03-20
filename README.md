@@ -12,7 +12,7 @@
 | **UI 组件** | Ant Design 5 |
 | **路由** | React Router 7 |
 | **后端 API** | FastAPI + Uvicorn |
-| **策略引擎** | Python 3.11+ (one_to_two_V2) |
+| **策略引擎** | Python 3.11+ |
 
 ## 环境要求
 
@@ -29,7 +29,7 @@
 npm install
 
 # 安装 Python 依赖
-pip install -e ./one_to_two_V2
+pip install -e .
 pip install fastapi uvicorn pydantic
 ```
 
@@ -64,21 +64,30 @@ one_to_two_V3/
 ├── electron/                # Electron 主进程
 │   ├── main.ts              # 主进程入口
 │   └── preload.ts           # 预加载脚本
-├── src/renderer/            # React 渲染进程
+├── src/                     # React 前端源码
 │   ├── components/          # 公共组件
 │   ├── pages/               # 页面组件
 │   ├── services/            # API 服务
-│   └── stores/              # 状态管理
-├── python-api/              # Python FastAPI 后端
+│   ├── stores/              # 状态管理
+│   ├── router/              # 路由配置
+│   ├── types/               # 类型定义
+│   ├── App.tsx              # 主应用组件
+│   └── main.tsx             # 入口文件
+├── index.html               # HTML 入口
+├── python-api/              # Python FastAPI 后端（集中目录）
 │   ├── main.py              # API 入口
+│   ├── pipeline_defaults.json  # 管道默认配置
 │   ├── routes/              # API 路由
 │   ├── services/            # 业务服务
-│   └── models/              # 数据模型
-├── one_to_two_V2/           # 策略核心引擎
-│   ├── src/                 # 核心源码
-│   ├── config/              # 配置文件
-│   ├── data/                # 数据目录
-│   └── reports/             # 报告输出
+│   ├── schemas/             # API 数据模型
+│   ├── ml/                  # 机器学习模块
+│   ├── core/                # 核心算法模块
+│   ├── data/                # 数据处理模块
+│   ├── pipeline/            # 流水线模块
+│   ├── scripts/             # Python 脚本
+│   ├── tests/               # 测试代码
+│   └── datasets/            # 数据目录
+├── reports/                 # 报告输出
 ├── build/                   # 构建资源
 ├── scripts/                 # 构建脚本
 └── release/                 # 发布输出
@@ -130,7 +139,7 @@ npm run preview      # 预览构建结果
 ## 配置说明
 
 - `electron-builder.yml` - 打包配置
-- `one_to_two_V2/config/pipeline_defaults.json` - 策略默认配置
+- `config/pipeline_defaults.json` - 策略默认配置
 
 ## 许可证
 

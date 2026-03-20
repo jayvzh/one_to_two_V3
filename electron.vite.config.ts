@@ -33,12 +33,11 @@ export default defineConfig({
     }
   },
   renderer: {
-    root: resolve(__dirname, 'src/renderer'),
-    open: true,
+    root: resolve(__dirname, '.'),
     build: {
       rollupOptions: {
         input: {
-          index: resolve(__dirname, 'src/renderer/index.html')
+          index: resolve(__dirname, 'index.html')
         },
         output: {
           dir: 'out/renderer'
@@ -58,7 +57,7 @@ export default defineConfig({
     },
     resolve: {
       alias: {
-        '@': resolve(__dirname, 'src/renderer/src')
+        '@': resolve(__dirname, 'src')
       }
     }
   }

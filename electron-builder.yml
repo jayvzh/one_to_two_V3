@@ -1,6 +1,10 @@
 appId: com.onetotwo.app
-productName: OneToTwo
-copyright: Copyright © 2024 OneToTwo Team
+productName: OneToTwo Assistant
+copyright: Copyright © 2025 MUE Studio
+
+win:
+  executableName: OneToTwo
+  artifactName: OneToTwo-Setup v${version}.${ext}
 
 directories:
   output: release
@@ -14,31 +18,14 @@ files:
 extraResources:
   - from: dist/onetotwo-api.exe
     to: onetotwo-api.exe
-  - from: one_to_two_V2/config
-    to: one_to_two_V2/config
-  - from: one_to_two_V2/src/pipeline/templates
-    to: one_to_two_V2/src/pipeline/templates
+
+extraFiles:
+  - from: python-api/pipeline_defaults.json
+    to: pipeline_defaults.json
+  - from: python-api/pipeline/templates
+    to: pipeline/templates
+  - from: python-api/datasets
+    to: datasets
 
 asarUnpack:
-  - one_to_two_V2/**/*
-
-win:
-  target:
-    - target: nsis
-      arch:
-        - x64
-  icon: build/icon.ico
-  artifactName: ${productName}-${version}-Setup-${arch}.exe
-
-nsis:
-  oneClick: false
-  allowToChangeInstallationDirectory: true
-  createDesktopShortcut: true
-  createStartMenuShortcut: true
-  shortcutName: ${productName}
-  deleteAppDataOnUninstall: false
-  runAfterFinish: true
-  language: "2052"
-  perMachine: false
-
-compression: maximum
+  - pipeline/**/*

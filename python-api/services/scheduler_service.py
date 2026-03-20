@@ -3,11 +3,11 @@ from pathlib import Path
 from typing import Optional
 from dataclasses import asdict
 
-V2_DIR = Path(__file__).parent.parent.parent / "one_to_two_V2"
-if str(V2_DIR) not in sys.path:
-    sys.path.insert(0, str(V2_DIR))
+PROJECT_ROOT = Path(__file__).parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
-from app.scheduler import (
+from core.scheduler import (
     get_task_status,
     install_task,
     uninstall_task,

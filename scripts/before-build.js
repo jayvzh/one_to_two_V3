@@ -19,9 +19,9 @@ export default async function(context) {
     throw new Error('Python API directory not found.')
   }
   
-  const v2Dir = join(projectRoot, 'one_to_two_V2')
-  if (!existsSync(v2Dir)) {
-    throw new Error('one_to_two_V2 directory not found.')
+  const configDir = join(projectRoot, 'config')
+  if (!existsSync(configDir)) {
+    throw new Error('config directory not found.')
   }
   
   console.log('[before-build] Pre-build checks passed.')

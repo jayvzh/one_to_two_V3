@@ -8,9 +8,7 @@ from PyInstaller.utils.hooks import collect_data_files, collect_submodules
 
 block_cipher = None
 
-project_root = Path(SPECPATH).parent
-v2_path = project_root / "one_to_two_V2"
-api_path = project_root / "python-api"
+api_path = Path(SPECPATH)
 
 binaries = []
 datas = []
@@ -21,11 +19,15 @@ datas += collect_data_files('scipy', include_py_files=True)
 datas += collect_data_files('sklearn', include_py_files=True)
 datas += collect_data_files('akshare', include_py_files=True)
 
-datas.append((str(v2_path / "config"), "one_to_two_V2/config"))
-datas.append((str(v2_path / "src"), "one_to_two_V2/src"))
-datas.append((str(api_path / "models"), "python-api/models"))
-datas.append((str(api_path / "routes"), "python-api/routes"))
-datas.append((str(api_path / "services"), "python-api/services"))
+datas.append((str(api_path / "pipeline_defaults.json"), "."))
+datas.append((str(api_path / "pipeline" / "templates"), "pipeline/templates"))
+datas.append((str(api_path / "schemas"), "schemas"))
+datas.append((str(api_path / "routes"), "routes"))
+datas.append((str(api_path / "services"), "services"))
+datas.append((str(api_path / "core"), "core"))
+datas.append((str(api_path / "data"), "data"))
+datas.append((str(api_path / "ml"), "ml"))
+datas.append((str(api_path / "pipeline"), "pipeline"))
 
 hidden_imports = [
     'uvicorn',
@@ -93,45 +95,44 @@ hidden_imports = [
     'pathlib',
     'typing',
     'typing_extensions',
-    'src',
-    'src.core',
-    'src.core.constants',
-    'src.core.emotion',
-    'src.core.features',
-    'src.core.heatmap',
-    'src.core.label',
-    'src.core.rules',
-    'src.core.scoring',
-    'src.data',
-    'src.data.ak',
-    'src.data.cache',
-    'src.data.columns',
-    'src.data.prepare',
-    'src.data.sync_cache',
-    'src.data.trade_calendar',
-    'src.model',
-    'src.model.evaluator',
-    'src.model.trainer',
-    'src.pipeline',
-    'src.pipeline.backtest_emotion',
-    'src.pipeline.config',
-    'src.pipeline.daily',
-    'src.pipeline.heatmap',
-    'src.pipeline.report',
-    'src.pipeline.rolling',
-    'src.pipeline.train_model',
-    'src.utils',
-    'src.utils.logging_config',
+    'core',
+    'core.constants',
+    'core.emotion',
+    'core.features',
+    'core.heatmap',
+    'core.label',
+    'core.logging',
+    'core.rules',
+    'core.scoring',
+    'core.scheduler',
+    'data',
+    'data.ak',
+    'data.cache',
+    'data.columns',
+    'data.prepare',
+    'data.sync_cache',
+    'data.trade_calendar',
+    'ml',
+    'ml.evaluator',
+    'ml.trainer',
+    'pipeline',
+    'pipeline.backtest_emotion',
+    'pipeline.config',
+    'pipeline.daily',
+    'pipeline.heatmap',
+    'pipeline.report',
+    'pipeline.rolling',
+    'pipeline.train_model',
+    'schemas',
+    'schemas.responses',
+    'schemas.tasks',
 ]
 
 hidden_imports.extend(collect_submodules('routes'))
 hidden_imports.extend(collect_submodules('services'))
-hidden_imports.extend(collect_submodules('models'))
+hidden_imports.extend(collect_submodules('schemas'))
 hidden_imports.extend(['py_mini_racer'])
 
-# Get py_mini_racer package path for including DLL
-# NOTE: py_mini_racer's legacy code (py_mini_racer.py) expects DLL at _MEIPASS root,
-# not in py_mini_racer subdirectory. So we use '.' as the destination.
 try:
     import py_mini_racer
     py_mini_racer_path = Path(py_mini_racer.__file__).parent
@@ -143,7 +144,7 @@ except Exception as e:
 
 a = Analysis(
     ['standalone_main.py'],
-    pathex=[str(api_path), str(v2_path)],
+    pathex=[str(api_path)],
     binaries=binaries,
     datas=datas,
     hiddenimports=hidden_imports,
@@ -179,5 +180,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=str(project_root / "build" / "icon.ico") if (project_root / "build" / "icon.ico").exists() else None,
+    icon=str(api_path.parent / "build" / "icon.ico") if (api_path.parent / "build" / "icon.ico").exists() else None,
 )

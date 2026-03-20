@@ -7,16 +7,16 @@ from pathlib import Path
 import sys
 import os
 
-V2_DIR = Path(__file__).parent.parent / "one_to_two_V2"
+PROJECT_ROOT = Path(__file__).parent
 API_DIR = Path(__file__).parent
 
-if str(V2_DIR) not in sys.path:
-    sys.path.insert(0, str(V2_DIR))
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 if str(API_DIR) not in sys.path:
     sys.path.insert(0, str(API_DIR))
 
-os.chdir(V2_DIR)
+os.chdir(PROJECT_ROOT)
 
 from routes import router as api_router
 
@@ -24,7 +24,7 @@ from routes import router as api_router
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     print("Starting OneToTwo API Server...")
-    print(f"Working directory: {V2_DIR}")
+    print(f"Working directory: {PROJECT_ROOT}")
     print(f"API directory: {API_DIR}")
     yield
     print("Shutting down OneToTwo API Server...")
@@ -45,7 +45,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-reports_dir = V2_DIR / "reports"
+reports_dir = PROJECT_ROOT / "reports"
 reports_dir.mkdir(parents=True, exist_ok=True)
 app.mount("/reports", StaticFiles(directory=str(reports_dir)), name="reports")
 

@@ -3,12 +3,12 @@ from pathlib import Path
 from typing import Any, Optional
 from dataclasses import asdict
 
-V2_DIR = Path(__file__).parent.parent.parent / "one_to_two_V2"
+PROJECT_ROOT = Path(__file__).parent.parent
 
 
 class ConfigService:
     def __init__(self, config_path: Optional[Path] = None):
-        self.config_path = config_path or V2_DIR / "config" / "pipeline_defaults.json"
+        self.config_path = config_path or PROJECT_ROOT / "config" / "pipeline_defaults.json"
         self._config_cache: Optional[dict] = None
 
     def _load_config(self) -> dict:
